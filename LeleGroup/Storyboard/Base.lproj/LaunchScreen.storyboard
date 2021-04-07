@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bry-6r-awt" userLabel="bg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaI-tC-yHx" userLabel="Centre">
+                                        <rect key="frame" x="0.0" y="229" width="414" height="360"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L E L E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXY-2m-Uck">
+                                                <rect key="frame" x="41.5" y="162" width="331" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="46"/>
+                                                <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monitor Suhu Kolam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3R-ea-bez">
+                                                <rect key="frame" x="41.5" y="206" width="331" height="26"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                <color key="textColor" red="0.84706455469999997" green="0.84704858059999999" blue="0.84705936910000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="rXY-2m-Uck" firstAttribute="height" secondItem="qaI-tC-yHx" secondAttribute="height" multiplier="0.1" id="7nk-8m-uHA"/>
+                                            <constraint firstItem="rXY-2m-Uck" firstAttribute="centerY" secondItem="qaI-tC-yHx" secondAttribute="centerY" id="Drb-NU-va2"/>
+                                            <constraint firstItem="d3R-ea-bez" firstAttribute="centerX" secondItem="qaI-tC-yHx" secondAttribute="centerX" id="Mjw-oq-Nxe"/>
+                                            <constraint firstItem="rXY-2m-Uck" firstAttribute="width" secondItem="qaI-tC-yHx" secondAttribute="width" multiplier="0.8" id="f7L-Xd-uzV"/>
+                                            <constraint firstItem="rXY-2m-Uck" firstAttribute="centerX" secondItem="qaI-tC-yHx" secondAttribute="centerX" id="fKB-QT-7s3"/>
+                                            <constraint firstItem="d3R-ea-bez" firstAttribute="top" secondItem="rXY-2m-Uck" secondAttribute="bottom" constant="8" symbolic="YES" id="qKg-gp-GmU"/>
+                                            <constraint firstItem="d3R-ea-bez" firstAttribute="width" secondItem="qaI-tC-yHx" secondAttribute="width" multiplier="0.799517" id="slL-X8-hb6"/>
+                                            <constraint firstItem="d3R-ea-bez" firstAttribute="height" secondItem="qaI-tC-yHx" secondAttribute="height" multiplier="0.0725389" id="zm1-ev-7Bp"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25488850470000002" green="0.36206501720000001" blue="0.25096416469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="qaI-tC-yHx" firstAttribute="centerY" secondItem="bry-6r-awt" secondAttribute="centerY" id="7GD-mw-w4O"/>
+                                    <constraint firstItem="qaI-tC-yHx" firstAttribute="centerX" secondItem="bry-6r-awt" secondAttribute="centerX" id="dXz-Qi-aXp"/>
+                                    <constraint firstItem="qaI-tC-yHx" firstAttribute="height" secondItem="bry-6r-awt" secondAttribute="height" multiplier="0.440098" id="euC-GA-PRx"/>
+                                    <constraint firstItem="qaI-tC-yHx" firstAttribute="width" secondItem="bry-6r-awt" secondAttribute="width" id="jvl-5w-co8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bry-6r-awt" secondAttribute="bottom" id="5lj-Bc-mQM"/>
+                            <constraint firstItem="bry-6r-awt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8wb-Fl-xRo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bry-6r-awt" secondAttribute="trailing" id="p4U-eO-0GV"/>
+                            <constraint firstItem="bry-6r-awt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="s5f-7u-ggM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
