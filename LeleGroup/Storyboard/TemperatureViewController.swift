@@ -10,6 +10,7 @@ import UIKit
 class TemperatureViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var poolData: [Pool] = Pool.generateDummyPool()
+    var alertData: [Pool] = Alert.generateDummyAlert()
     var isDataEmpty = true
     
     //Main Section
@@ -44,21 +45,30 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        checkIsDataEmpty()
-        if !isDataEmpty {
+        if !checkIsDataEmpty(poolData.count) {
             temperatureIsEmptyView.isHidden = true
             temperatureIsNotEmptyView.isHidden = false
-            poolAndAlertDataSourceAndDelegate()
+            runDataSourceAndDelegate()
+        } else {
+            temperatureIsEmptyView.isHidden = false
+            temperatureIsNotEmptyView.isHidden = true
+        }
+        
+        if !checkIsDataEmpty(alertData.count) {
+            alertIsEmptyView.isHidden = true
+            alertIsNotEmptyView.isHidden = false
+            runDataSourceAndDelegate()
         } else {
             temperatureIsEmptyView.isHidden = false
             temperatureIsNotEmptyView.isHidden = true
         }
        
+       
     }
     //CollectionView Func
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.alertCollectionView {
-            return 3
+            return alertData.count
         } else {
             return poolData.count
         }
@@ -75,7 +85,7 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
         } else {
             let alertCell = collectionView.dequeueReusableCell(withReuseIdentifier: "alertCollectionCell", for: indexPath) as! CustomAlertCollectionViewCell
             
-            alertCell.poolTitle?.text = "dsadsadsads"
+            alertCell.alerts = alertData[indexPath.row]
             
             
             return alertCell
@@ -84,11 +94,11 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     //Made Function
-    func checkIsDataEmpty() {
-        if poolData.count == 0 {
-            isDataEmpty = true
+    func checkIsDataEmpty(_ data:Int) -> Bool {
+        if data == 0 {
+           return true
         } else {
-            isDataEmpty = false
+        return false
         }
     }
     
@@ -119,46 +129,11 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
             }
     }
     
-    func poolAndAlertDataSourceAndDelegate () {
+    func runDataSourceAndDelegate () {
         poolCollectionView.dataSource = self
         poolCollectionView.delegate = self
         alertCollectionView.dataSource = self
         alertCollectionView.delegate = self
     }
-    
-    func cellStyle(status: String,alert: String){
-        var bgColor, borderColor, iconColor: UIColor
-        if status == "inactive" {
-            //dark grey
-            bgColor = .init(red: 153, green: 153, blue: 153, alpha: 1)
-            borderColor = .clear
-            iconColor = .clear
-            
-        } else {
-            if alert == "warning" {
-            //yellow
-            bgColor = .init(red: 257, green: 181, blue: 0, alpha: 0.08)
-            borderColor = .init(red: 257, green: 181, blue: 0, alpha: 1)
-            iconColor = .init(red: 257, green: 181, blue: 0, alpha: 1)
-            
-        } else if alert == "danger" {
-            //red
-            bgColor = .init(red: 224, green: 132, blue: 32, alpha: 0.08)
-            borderColor = .init(red: 224, green: 132, blue: 32, alpha: 1)
-            iconColor = .init(red: 224, green: 132, blue: 32, alpha: 1)
-            
-        } else {
-            //grey
-            bgColor = .init(red: 249, green: 249, blue: 249, alpha: 1)
-            borderColor = .init(red: 178, green: 178, blue: 178, alpha: 1)
-            iconColor = .clear
-        }
-        
-    }
-    }
-
-  
-
-
 }
 
