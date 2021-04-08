@@ -106,7 +106,7 @@ class HistoryTableViewController: UITableViewController {
         cell.customCellView.layer.cornerRadius = 10
         
         cell.pondLabel.text = kolams
-        cell.tempLabel.text = "\(temp) C"
+        cell.tempLabel.text = "\(temp) °C"
         cell.timeLabel.text = "10:10"
         return cell
     }

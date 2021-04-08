@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E522303261F35E000C0987D /* TemperatureSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E522302261F35E000C0987D /* TemperatureSetting.swift */; };
 		752F6CDA261F187300BA4362 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F6CD9261F187300BA4362 /* CustomCell.swift */; };
 		BF9B1C52261D9710006FE7BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C51261D9710006FE7BE /* AppDelegate.swift */; };
 		BF9B1C54261D9710006FE7BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C53261D9710006FE7BE /* SceneDelegate.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E522302261F35E000C0987D /* TemperatureSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureSetting.swift; sourceTree = "<group>"; };
 		752F6CD9261F187300BA4362 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCell.swift; path = "LeleGroup/Storyboard/Bayu (Riwayat)/CustomCell.swift"; sourceTree = SOURCE_ROOT; };
 		BF9B1C4E261D9710006FE7BE /* LeleGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeleGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9B1C51261D9710006FE7BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				BF9B1C8D261DE706006FE7BE /* TemperatureSetting.storyboard */,
+				5E522302261F35E000C0987D /* TemperatureSetting.swift */,
 			);
 			path = "Jason (Pengaturan Suhu)";
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				BF9B1C54261D9710006FE7BE /* SceneDelegate.swift in Sources */,
 				F98B9AA3261EA53600DABC18 /* LoginViewController.swift in Sources */,
 				BF9B1C9E261DEA6D006FE7BE /* SettingsViewController.swift in Sources */,
+				5E522303261F35E000C0987D /* TemperatureSetting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
