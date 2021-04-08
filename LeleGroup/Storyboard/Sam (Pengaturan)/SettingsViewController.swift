@@ -8,6 +8,10 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+    @IBAction func buttonTes (sender: UIButton){
+        performSegue(withIdentifier: "goToTemperature", sender: self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

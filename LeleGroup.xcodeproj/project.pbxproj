@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EA5A1F0261EBD0A00F19B45 /* TemperatureSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5A1EF261EBD0A00F19B45 /* TemperatureSetting.swift */; };
 		BF9B1C52261D9710006FE7BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C51261D9710006FE7BE /* AppDelegate.swift */; };
 		BF9B1C54261D9710006FE7BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C53261D9710006FE7BE /* SceneDelegate.swift */; };
 		BF9B1C56261D9710006FE7BE /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C55261D9710006FE7BE /* TemperatureViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5EA5A1EF261EBD0A00F19B45 /* TemperatureSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureSetting.swift; sourceTree = "<group>"; };
 		BF9B1C4E261D9710006FE7BE /* LeleGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeleGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9B1C51261D9710006FE7BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF9B1C53261D9710006FE7BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				BF9B1C8D261DE706006FE7BE /* TemperatureSetting.storyboard */,
+				5EA5A1EF261EBD0A00F19B45 /* TemperatureSetting.swift */,
 			);
 			path = "Jason (Pengaturan Suhu)";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				BF9B1C56261D9710006FE7BE /* TemperatureViewController.swift in Sources */,
 				BF9B1C87261DB66A006FE7BE /* AllAlertViewController.swift in Sources */,
 				BF9B1C9A261DEA3A006FE7BE /* HistoryTableViewController.swift in Sources */,
+				5EA5A1F0261EBD0A00F19B45 /* TemperatureSetting.swift in Sources */,
 				BF9B1C5C261D9710006FE7BE /* LeleGroup.xcdatamodeld in Sources */,
 				BF9B1C52261D9710006FE7BE /* AppDelegate.swift in Sources */,
 				BF9B1C6D261DAC8D006FE7BE /* Pool.swift in Sources */,

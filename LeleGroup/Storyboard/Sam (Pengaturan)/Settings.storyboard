@@ -15,21 +15,31 @@
                     <view key="view" contentMode="scaleToFill" id="zxt-5T-rOY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTt-vH-kS7">
+                                <rect key="frame" x="144" y="410" width="126" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTesWithSender:" destination="UE6-2O-LeF" eventType="touchUpInside" id="phx-3p-tkg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vcm-BI-sWz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <segue destination="x0l-n1-2BN" kind="show" id="RvG-Fg-NpO"/>
+                        <segue destination="x0l-n1-2BN" kind="show" identifier="goToTemperature" id="RvG-Fg-NpO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g2Q-Cb-E5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="274" y="88"/>
+            <point key="canvasLocation" x="273.91304347826087" y="87.723214285714278"/>
         </scene>
-        <!--Settings-->
+        <!--TemperatureSetting-->
         <scene sceneID="Dz6-65-OGo">
             <objects>
-                <viewControllerPlaceholder storyboardName="Settings" id="x0l-n1-2BN" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="TemperatureSetting" id="x0l-n1-2BN" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="4bc-DL-yi8"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgK-UR-HUH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
