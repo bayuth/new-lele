@@ -690,9 +690,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="qAj-EJ-WnX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wVk-Kk-x6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="p7Q-0x-Zpp" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="iuK-BJ-HTN"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hli-tY-slj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -704,6 +702,7 @@
                         <segue destination="rLN-TQ-cMD" kind="relationship" relationship="viewControllers" id="C6e-ZJ-BdU"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wVk-Kk-x6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-443" y="-706"/>
         </scene>
@@ -724,7 +723,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYl-Tt-L4u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="977" y="-1146"/>
+            <point key="canvasLocation" x="1042.0289855072465" y="-1146.4285714285713"/>
         </scene>
         <!--Login-->
         <scene sceneID="l35-l3-2Kb">
