@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FBG-7J-hWO">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,89 +8,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--View Controller-->
         <scene sceneID="kJo-yE-i6m">
             <objects>
-                <viewController id="FBG-7J-hWO" customClass="LoginViewController" customModule="LeleGroup" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FBG-7J-hWO" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FZB-20-aHo">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P29-9V-ovm">
-                                <rect key="frame" x="0.0" y="44" width="366" height="44"/>
-                                <items>
-                                    <navigationItem title="Masuk" id="c9E-hh-NT7"/>
-                                </items>
-                            </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Vf-5Q-HYp">
-                                <rect key="frame" x="20" y="108" width="350" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="hK8-fJ-qbq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VP8-Vw-buE">
-                                <rect key="frame" x="20" y="178" width="350" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="mxq-eR-5bc"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="pM1-71-76Q"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Q1-ik-vI3" customClass="roundedButton" customModule="LeleGroup" customModuleProvider="target">
-                                <rect key="frame" x="20" y="248" width="350" height="50"/>
-                                <color key="backgroundColor" red="0.25096505879999997" green="0.35437017679999999" blue="0.24704325199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="1p6-C8-VNm"/>
-                                </constraints>
-                                <state key="normal" title="Masuk">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="masukPressed:" destination="FBG-7J-hWO" eventType="touchUpInside" id="Pht-2Q-jwT"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8Tk-62-gwH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="VP8-Vw-buE" firstAttribute="top" secondItem="9Vf-5Q-HYp" secondAttribute="bottom" constant="20" id="4ov-Gd-RA1"/>
-                            <constraint firstItem="P29-9V-ovm" firstAttribute="top" secondItem="8Tk-62-gwH" secondAttribute="top" id="77L-Es-l23"/>
-                            <constraint firstItem="9Vf-5Q-HYp" firstAttribute="leading" secondItem="8Tk-62-gwH" secondAttribute="leading" constant="20" id="D5g-8e-xva"/>
-                            <constraint firstItem="9Vf-5Q-HYp" firstAttribute="centerX" secondItem="FZB-20-aHo" secondAttribute="centerX" id="E4i-Qv-F01"/>
-                            <constraint firstItem="7Q1-ik-vI3" firstAttribute="centerX" secondItem="FZB-20-aHo" secondAttribute="centerX" id="NIe-Fc-LBN"/>
-                            <constraint firstItem="VP8-Vw-buE" firstAttribute="leading" secondItem="8Tk-62-gwH" secondAttribute="leading" constant="20" id="Oa2-LG-oi4"/>
-                            <constraint firstItem="P29-9V-ovm" firstAttribute="width" secondItem="8Tk-62-gwH" secondAttribute="width" id="Pf5-gx-V41"/>
-                            <constraint firstItem="8Tk-62-gwH" firstAttribute="trailing" secondItem="9Vf-5Q-HYp" secondAttribute="trailing" constant="20" id="WnJ-n4-C7P"/>
-                            <constraint firstItem="P29-9V-ovm" firstAttribute="centerX" secondItem="FZB-20-aHo" secondAttribute="centerX" id="eeL-vo-gp5"/>
-                            <constraint firstItem="7Q1-ik-vI3" firstAttribute="top" secondItem="VP8-Vw-buE" secondAttribute="bottom" constant="20" id="fmN-lq-TEY"/>
-                            <constraint firstItem="8Tk-62-gwH" firstAttribute="trailing" secondItem="7Q1-ik-vI3" secondAttribute="trailing" constant="20" id="iyP-NX-O2k"/>
-                            <constraint firstItem="8Tk-62-gwH" firstAttribute="trailing" secondItem="VP8-Vw-buE" secondAttribute="trailing" constant="20" id="lsE-9o-jYn"/>
-                            <constraint firstItem="7Q1-ik-vI3" firstAttribute="leading" secondItem="8Tk-62-gwH" secondAttribute="leading" constant="20" id="oVL-VV-XdO"/>
-                            <constraint firstItem="9Vf-5Q-HYp" firstAttribute="top" secondItem="P29-9V-ovm" secondAttribute="bottom" constant="20" id="zUB-yi-02l"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="emailField" destination="9Vf-5Q-HYp" id="U2s-W5-bya"/>
-                        <outlet property="passwordField" destination="VP8-Vw-buE" id="eqA-yD-3E6"/>
-                        <segue destination="vxY-dI-mAO" kind="show" identifier="goToMain" id="iO9-vr-TLO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5K2-6g-nBC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-449" y="70"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="D6J-GU-69d">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="vxY-dI-mAO" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="KI3-LX-60v"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4vu-xZ-FAm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="173" y="-168"/>
         </scene>
     </scenes>
     <resources>

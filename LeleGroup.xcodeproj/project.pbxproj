@@ -7,11 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
 		5EA5A1F0261EBD0A00F19B45 /* TemperatureSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA5A1EF261EBD0A00F19B45 /* TemperatureSetting.swift */; };
-=======
-		752F6CDA261F187300BA4362 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F6CD9261F187300BA4362 /* CustomCell.swift */; };
->>>>>>> 5ed25bee8c23a00551e8ad5cdcdf269e02c73ce8
 		BF9B1C52261D9710006FE7BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C51261D9710006FE7BE /* AppDelegate.swift */; };
 		BF9B1C54261D9710006FE7BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C53261D9710006FE7BE /* SceneDelegate.swift */; };
 		BF9B1C56261D9710006FE7BE /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C55261D9710006FE7BE /* TemperatureViewController.swift */; };
@@ -31,16 +27,10 @@
 		BF9B1C97261DE90D006FE7BE /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9B1C96261DE90D006FE7BE /* History.storyboard */; };
 		BF9B1C9A261DEA3A006FE7BE /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C99261DEA3A006FE7BE /* HistoryTableViewController.swift */; };
 		BF9B1C9E261DEA6D006FE7BE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C9D261DEA6D006FE7BE /* SettingsViewController.swift */; };
-		F98B9AA3261EA53600DABC18 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B9AA2261EA53600DABC18 /* LoginViewController.swift */; };
-		F98B9AA6261EBAA700DABC18 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B9AA5261EBAA700DABC18 /* Button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
 		5EA5A1EF261EBD0A00F19B45 /* TemperatureSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureSetting.swift; sourceTree = "<group>"; };
-=======
-		752F6CD9261F187300BA4362 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCell.swift; path = "LeleGroup/Storyboard/Bayu (Riwayat)/CustomCell.swift"; sourceTree = SOURCE_ROOT; };
->>>>>>> 5ed25bee8c23a00551e8ad5cdcdf269e02c73ce8
 		BF9B1C4E261D9710006FE7BE /* LeleGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeleGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9B1C51261D9710006FE7BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF9B1C53261D9710006FE7BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,8 +52,6 @@
 		BF9B1C96261DE90D006FE7BE /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		BF9B1C99261DEA3A006FE7BE /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		BF9B1C9D261DEA6D006FE7BE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		F98B9AA2261EA53600DABC18 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		F98B9AA5261EBAA700DABC18 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Button.swift; path = "LeleGroup/Storyboard/Patya (Login)/Button.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				BF9B1C76261DAE32006FE7BE /* Login.storyboard */,
-				F98B9AA2261EA53600DABC18 /* LoginViewController.swift */,
 			);
 			path = "Patya (Login)";
 			sourceTree = "<group>";
@@ -140,8 +127,6 @@
 		BF9B1C7A261DAFD7006FE7BE /* Custom Style */ = {
 			isa = PBXGroup;
 			children = (
-				F98B9AA5261EBAA700DABC18 /* Button.swift */,
-				752F6CD9261F187300BA4362 /* CustomCell.swift */,
 			);
 			path = "Custom Style";
 			sourceTree = "<group>";
@@ -275,8 +260,6 @@
 				BF9B1C72261DACD7006FE7BE /* Alert.swift in Sources */,
 				BF9B1C7D261DB4F8006FE7BE /* CustomPoolCollectionViewCell.swift in Sources */,
 				BF9B1C56261D9710006FE7BE /* TemperatureViewController.swift in Sources */,
-				F98B9AA6261EBAA700DABC18 /* Button.swift in Sources */,
-				752F6CDA261F187300BA4362 /* CustomCell.swift in Sources */,
 				BF9B1C87261DB66A006FE7BE /* AllAlertViewController.swift in Sources */,
 				BF9B1C9A261DEA3A006FE7BE /* HistoryTableViewController.swift in Sources */,
 				5EA5A1F0261EBD0A00F19B45 /* TemperatureSetting.swift in Sources */,
@@ -284,7 +267,6 @@
 				BF9B1C52261D9710006FE7BE /* AppDelegate.swift in Sources */,
 				BF9B1C6D261DAC8D006FE7BE /* Pool.swift in Sources */,
 				BF9B1C54261D9710006FE7BE /* SceneDelegate.swift in Sources */,
-				F98B9AA3261EA53600DABC18 /* LoginViewController.swift in Sources */,
 				BF9B1C9E261DEA6D006FE7BE /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
