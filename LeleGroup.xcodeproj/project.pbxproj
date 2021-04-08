@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		752F6CDA261F187300BA4362 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F6CD9261F187300BA4362 /* CustomCell.swift */; };
+		BF9B1C52261D9710006FE7BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C51261D9710006FE7BE /* AppDelegate.swift */; };
+		BF9B1C54261D9710006FE7BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C53261D9710006FE7BE /* SceneDelegate.swift */; };
+		BF9B1C56261D9710006FE7BE /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C55261D9710006FE7BE /* TemperatureViewController.swift */; };
+		BF9B1C59261D9710006FE7BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9B1C57261D9710006FE7BE /* Main.storyboard */; };
+		BF9B1C5C261D9710006FE7BE /* LeleGroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C5A261D9710006FE7BE /* LeleGroup.xcdatamodeld */; };
+		BF9B1C5E261D9711006FE7BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9B1C5D261D9711006FE7BE /* Assets.xcassets */; };
+		BF9B1C61261D9711006FE7BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9B1C5F261D9711006FE7BE /* LaunchScreen.storyboard */; };
+		BF9B1C6D261DAC8D006FE7BE /* Pool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C6C261DAC8D006FE7BE /* Pool.swift */; };
+		BF9B1C72261DACD7006FE7BE /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C71261DACD7006FE7BE /* Alert.swift */; };
+		BF9B1C77261DAE32006FE7BE /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9B1C76261DAE32006FE7BE /* Login.storyboard */; };
+		BF9B1C7D261DB4F8006FE7BE /* CustomPoolCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C7C261DB4F8006FE7BE /* CustomPoolCollectionViewCell.swift */; };
+		BF9B1C80261DB50C006FE7BE /* CustomAlertCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C7F261DB50C006FE7BE /* CustomAlertCollectionViewCell.swift */; };
+		BF9B1C84261DB5A8006FE7BE /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C83261DB5A8006FE7BE /* Extension.swift */; };
+		BF9B1C87261DB66A006FE7BE /* AllAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C86261DB66A006FE7BE /* AllAlertViewController.swift */; };
+		BF9B1C8E261DE706006FE7BE /* TemperatureSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9B1C8D261DE706006FE7BE /* TemperatureSetting.storyboard */; };
+		BF9B1C93261DE7AE006FE7BE /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9B1C92261DE7AE006FE7BE /* Settings.storyboard */; };
+		BF9B1C97261DE90D006FE7BE /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9B1C96261DE90D006FE7BE /* History.storyboard */; };
+		BF9B1C9A261DEA3A006FE7BE /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C99261DEA3A006FE7BE /* HistoryTableViewController.swift */; };
+		BF9B1C9E261DEA6D006FE7BE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C9D261DEA6D006FE7BE /* SettingsViewController.swift */; };
+		F98B9AA3261EA53600DABC18 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B9AA2261EA53600DABC18 /* LoginViewController.swift */; };
+		F98B9AA6261EBAA700DABC18 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B9AA5261EBAA700DABC18 /* Button.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		752F6CD9261F187300BA4362 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCell.swift; path = "LeleGroup/Storyboard/Bayu (Riwayat)/CustomCell.swift"; sourceTree = SOURCE_ROOT; };
+		BF9B1C4E261D9710006FE7BE /* LeleGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeleGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF9B1C51261D9710006FE7BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF9B1C53261D9710006FE7BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BF9B1C55261D9710006FE7BE /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
+		BF9B1C58261D9710006FE7BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF9B1C5B261D9710006FE7BE /* LeleGroup.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LeleGroup.xcdatamodel; sourceTree = "<group>"; };
+		BF9B1C5D261D9711006FE7BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF9B1C60261D9711006FE7BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF9B1C62261D9711006FE7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF9B1C6C261DAC8D006FE7BE /* Pool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pool.swift; sourceTree = "<group>"; };
+		BF9B1C71261DACD7006FE7BE /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		BF9B1C76261DAE32006FE7BE /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		BF9B1C7C261DB4F8006FE7BE /* CustomPoolCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPoolCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF9B1C7F261DB50C006FE7BE /* CustomAlertCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF9B1C83261DB5A8006FE7BE /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		BF9B1C86261DB66A006FE7BE /* AllAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAlertViewController.swift; sourceTree = "<group>"; };
+		BF9B1C8D261DE706006FE7BE /* TemperatureSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TemperatureSetting.storyboard; sourceTree = "<group>"; };
+		BF9B1C92261DE7AE006FE7BE /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		BF9B1C96261DE90D006FE7BE /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		BF9B1C99261DEA3A006FE7BE /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		BF9B1C9D261DEA6D006FE7BE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F98B9AA2261EA53600DABC18 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F98B9AA5261EBAA700DABC18 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Button.swift; path = "LeleGroup/Storyboard/Patya (Login)/Button.swift"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF9B1C4B261D9710006FE7BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF9B1C45261D9710006FE7BE = {
+			isa = PBXGroup;
+			children = (
+				BF9B1C50261D9710006FE7BE /* LeleGroup */,
+				BF9B1C4F261D9710006FE7BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF9B1C4F261D9710006FE7BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF9B1C4E261D9710006FE7BE /* LeleGroup.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF9B1C50261D9710006FE7BE /* LeleGroup */ = {
+			isa = PBXGroup;
+			children = (
+				BF9B1C51261D9710006FE7BE /* AppDelegate.swift */,
+				BF9B1C53261D9710006FE7BE /* SceneDelegate.swift */,
+				BF9B1C8B261DE6CC006FE7BE /* Storyboard */,
+				BF9B1C6B261DAC46006FE7BE /* Data Class */,
+				BF9B1C6A261DAC3A006FE7BE /* Custom Component */,
+				BF9B1C7A261DAFD7006FE7BE /* Custom Style */,
+				BF9B1C82261DB58E006FE7BE /* Helper Component */,
+				BF9B1C5D261D9711006FE7BE /* Assets.xcassets */,
+				BF9B1C62261D9711006FE7BE /* Info.plist */,
+				BF9B1C5A261D9710006FE7BE /* LeleGroup.xcdatamodeld */,
+			);
+			path = LeleGroup;
+			sourceTree = "<group>";
+		};
+		BF9B1C6A261DAC3A006FE7BE /* Custom Component */ = {
+			isa = PBXGroup;
+			children = (
+				BF9B1C7C261DB4F8006FE7BE /* CustomPoolCollectionViewCell.swift */,
+				BF9B1C7F261DB50C006FE7BE /* CustomAlertCollectionViewCell.swift */,
+			);
+			path = "Custom Component";
+			sourceTree = "<group>";
+		};
+		BF9B1C6B261DAC46006FE7BE /* Data Class */ = {
+			isa = PBXGroup;
+			children = (
+				BF9B1C6C261DAC8D006FE7BE /* Pool.swift */,
+				BF9B1C71261DACD7006FE7BE /* Alert.swift */,
+			);
+			path = "Data Class";
+			sourceTree = "<group>";
+		};
+		BF9B1C75261DAE19006FE7BE /* Patya (Login) */ = {
+			isa = PBXGroup;
+			children = (
+				BF9B1C76261DAE32006FE7BE /* Login.storyboard */,
+				F98B9AA2261EA53600DABC18 /* LoginViewController.swift */,
+			);
+			path = "Patya (Login)";
+			sourceTree = "<group>";
+		};
+		BF9B1C7A261DAFD7006FE7BE /* Custom Style */ = {
+			isa = PBXGroup;
+			children = (
+				F98B9AA5261EBAA700DABC18 /* Button.swift */,
+				752F6CD9261F187300BA4362 /* CustomCell.swift */,
+			);
+			path = "Custom Style";
+			sourceTree = "<group>";
+		};
+		BF9B1C82261DB58E006FE7BE /* Helper Component */ = {
+			isa = PBXGroup;
+			children = (
+				BF9B1C83261DB5A8006FE7BE /* Extension.swift */,
+			);
+			path = "Helper Component";
+			sourceTree = "<group>";
+		};
+		BF9B1C8B261DE6CC006FE7BE /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BF9B1C95261DE8FB006FE7BE /* Bayu (Riwayat) */,
+				BF9B1C90261DE72D006FE7BE /* Sam (Pengaturan) */,
+				BF9B1C8C261DE6E8006FE7BE /* Jason (Pengaturan Suhu) */,
+				BF9B1C75261DAE19006FE7BE /* Patya (Login) */,
+				BF9B1C86261DB66A006FE7BE /* AllAlertViewController.swift */,
+				BF9B1C55261D9710006FE7BE /* TemperatureViewController.swift */,
+				BF9B1C57261D9710006FE7BE /* Main.storyboard */,
+				BF9B1C5F261D9711006FE7BE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		BF9B1C8C261DE6E8006FE7BE /* Jason (Pengaturan Suhu) */ = {
+			isa = PBXGroup;
+			children = (
+				BF9B1C8D261DE706006FE7BE /* TemperatureSetting.storyboard */,
+			);
+			path = "Jason (Pengaturan Suhu)";
+			sourceTree = "<group>";
+		};
+		BF9B1C90261DE72D006FE7BE /* Sam (Pengaturan) */ = {
+			isa = PBXGroup;
+			children = (
+				BF9B1C92261DE7AE006FE7BE /* Settings.storyboard */,
+				BF9B1C9D261DEA6D006FE7BE /* SettingsViewController.swift */,
+			);
+			path = "Sam (Pengaturan)";
+			sourceTree = "<group>";
+		};
+		BF9B1C95261DE8FB006FE7BE /* Bayu (Riwayat) */ = {
+			isa = PBXGroup;
+			children = (
+				BF9B1C96261DE90D006FE7BE /* History.storyboard */,
+				BF9B1C99261DEA3A006FE7BE /* HistoryTableViewController.swift */,
+			);
+			path = "Bayu (Riwayat)";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF9B1C4D261D9710006FE7BE /* LeleGroup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF9B1C65261D9711006FE7BE /* Build configuration list for PBXNativeTarget "LeleGroup" */;
+			buildPhases = (
+				BF9B1C4A261D9710006FE7BE /* Sources */,
+				BF9B1C4B261D9710006FE7BE /* Frameworks */,
+				BF9B1C4C261D9710006FE7BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeleGroup;
+			productName = LeleGroup;
+			productReference = BF9B1C4E261D9710006FE7BE /* LeleGroup.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF9B1C46261D9710006FE7BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					BF9B1C4D261D9710006FE7BE = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = BF9B1C49261D9710006FE7BE /* Build configuration list for PBXProject "LeleGroup" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF9B1C45261D9710006FE7BE;
+			productRefGroup = BF9B1C4F261D9710006FE7BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF9B1C4D261D9710006FE7BE /* LeleGroup */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF9B1C4C261D9710006FE7BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF9B1C8E261DE706006FE7BE /* TemperatureSetting.storyboard in Resources */,
+				BF9B1C77261DAE32006FE7BE /* Login.storyboard in Resources */,
+				BF9B1C97261DE90D006FE7BE /* History.storyboard in Resources */,
+				BF9B1C61261D9711006FE7BE /* LaunchScreen.storyboard in Resources */,
+				BF9B1C93261DE7AE006FE7BE /* Settings.storyboard in Resources */,
+				BF9B1C5E261D9711006FE7BE /* Assets.xcassets in Resources */,
+				BF9B1C59261D9710006FE7BE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF9B1C4A261D9710006FE7BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF9B1C84261DB5A8006FE7BE /* Extension.swift in Sources */,
+				BF9B1C80261DB50C006FE7BE /* CustomAlertCollectionViewCell.swift in Sources */,
+				BF9B1C72261DACD7006FE7BE /* Alert.swift in Sources */,
+				BF9B1C7D261DB4F8006FE7BE /* CustomPoolCollectionViewCell.swift in Sources */,
+				BF9B1C56261D9710006FE7BE /* TemperatureViewController.swift in Sources */,
+				F98B9AA6261EBAA700DABC18 /* Button.swift in Sources */,
+				752F6CDA261F187300BA4362 /* CustomCell.swift in Sources */,
+				BF9B1C87261DB66A006FE7BE /* AllAlertViewController.swift in Sources */,
+				BF9B1C9A261DEA3A006FE7BE /* HistoryTableViewController.swift in Sources */,
+				BF9B1C5C261D9710006FE7BE /* LeleGroup.xcdatamodeld in Sources */,
+				BF9B1C52261D9710006FE7BE /* AppDelegate.swift in Sources */,
+				BF9B1C6D261DAC8D006FE7BE /* Pool.swift in Sources */,
+				BF9B1C54261D9710006FE7BE /* SceneDelegate.swift in Sources */,
+				F98B9AA3261EA53600DABC18 /* LoginViewController.swift in Sources */,
+				BF9B1C9E261DEA6D006FE7BE /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BF9B1C57261D9710006FE7BE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF9B1C58261D9710006FE7BE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF9B1C5F261D9711006FE7BE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF9B1C60261D9711006FE7BE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF9B1C63261D9711006FE7BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF9B1C64261D9711006FE7BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF9B1C66261D9711006FE7BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4R76W27L99;
+				INFOPLIST_FILE = LeleGroup/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.appledeveloperacademy.LeleGroup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF9B1C67261D9711006FE7BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4R76W27L99;
+				INFOPLIST_FILE = LeleGroup/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.appledeveloperacademy.LeleGroup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF9B1C49261D9710006FE7BE /* Build configuration list for PBXProject "LeleGroup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF9B1C63261D9711006FE7BE /* Debug */,
+				BF9B1C64261D9711006FE7BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF9B1C65261D9711006FE7BE /* Build configuration list for PBXNativeTarget "LeleGroup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF9B1C66261D9711006FE7BE /* Debug */,
+				BF9B1C67261D9711006FE7BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF9B1C5A261D9710006FE7BE /* LeleGroup.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF9B1C5B261D9710006FE7BE /* LeleGroup.xcdatamodel */,
+			);
+			currentVersion = BF9B1C5B261D9710006FE7BE /* LeleGroup.xcdatamodel */;
+			path = LeleGroup.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BF9B1C46261D9710006FE7BE /* Project object */;
+}
