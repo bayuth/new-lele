@@ -26,6 +26,8 @@
 		BF9B1C97261DE90D006FE7BE /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9B1C96261DE90D006FE7BE /* History.storyboard */; };
 		BF9B1C9A261DEA3A006FE7BE /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C99261DEA3A006FE7BE /* HistoryTableViewController.swift */; };
 		BF9B1C9E261DEA6D006FE7BE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C9D261DEA6D006FE7BE /* SettingsViewController.swift */; };
+		F98B9AA3261EA53600DABC18 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B9AA2261EA53600DABC18 /* LoginViewController.swift */; };
+		F98B9AA6261EBAA700DABC18 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B9AA5261EBAA700DABC18 /* Button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		BF9B1C96261DE90D006FE7BE /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		BF9B1C99261DEA3A006FE7BE /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		BF9B1C9D261DEA6D006FE7BE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F98B9AA2261EA53600DABC18 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F98B9AA5261EBAA700DABC18 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Button.swift; path = "LeleGroup/Storyboard/Patya (Login)/Button.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				BF9B1C76261DAE32006FE7BE /* Login.storyboard */,
+				F98B9AA2261EA53600DABC18 /* LoginViewController.swift */,
 			);
 			path = "Patya (Login)";
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 		BF9B1C7A261DAFD7006FE7BE /* Custom Style */ = {
 			isa = PBXGroup;
 			children = (
+				F98B9AA5261EBAA700DABC18 /* Button.swift */,
 			);
 			path = "Custom Style";
 			sourceTree = "<group>";
@@ -257,12 +263,14 @@
 				BF9B1C72261DACD7006FE7BE /* Alert.swift in Sources */,
 				BF9B1C7D261DB4F8006FE7BE /* CustomPoolCollectionViewCell.swift in Sources */,
 				BF9B1C56261D9710006FE7BE /* TemperatureViewController.swift in Sources */,
+				F98B9AA6261EBAA700DABC18 /* Button.swift in Sources */,
 				BF9B1C87261DB66A006FE7BE /* AllAlertViewController.swift in Sources */,
 				BF9B1C9A261DEA3A006FE7BE /* HistoryTableViewController.swift in Sources */,
 				BF9B1C5C261D9710006FE7BE /* LeleGroup.xcdatamodeld in Sources */,
 				BF9B1C52261D9710006FE7BE /* AppDelegate.swift in Sources */,
 				BF9B1C6D261DAC8D006FE7BE /* Pool.swift in Sources */,
 				BF9B1C54261D9710006FE7BE /* SceneDelegate.swift in Sources */,
+				F98B9AA3261EA53600DABC18 /* LoginViewController.swift in Sources */,
 				BF9B1C9E261DEA6D006FE7BE /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
