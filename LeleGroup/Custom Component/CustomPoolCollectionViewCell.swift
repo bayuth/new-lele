@@ -17,35 +17,31 @@ class CustomPoolCollectionViewCell: UICollectionViewCell {
             poolTitle?.text = pool?.name
             temperatureDetail?.text = "\(pool?.alert.temperature.toString ?? "") °C"
             
-            if !(pool?.alert.isActive ?? false) {
+            if !(pool?.alert.isActive ?? true) {
                 temperatureDetail.textColor = .white
-                temperatureBox?.backgroundColor = .init(red: 153, green: 153, blue: 153, alpha: 1)
+                temperatureBox?.backgroundColor = #colorLiteral(red: 0.4940721393, green: 0.4941467047, blue: 0.4940558076, alpha: 1)
+                temperatureDetail.text = "Tidak Aktif"
                 
             } else {
                 let alert = pool?.alert.status
                 temperatureBox.layer.borderWidth = 1
                 if alert == "warning" {
                 //yellow
-                temperatureBox?.backgroundColor = .init(red: 257, green: 181, blue: 0, alpha: 0.08)
-                    temperatureBox?.layer.borderColor = .init(red: 257, green: 181, blue: 0, alpha: 1)
-                //iconColor = .init(red: 257, green: 181, blue: 0, alpha: 1)
+                    temperatureBox?.backgroundColor = #colorLiteral(red: 1, green: 0.7014456987, blue: 0, alpha: 0.08)
+                    temperatureBox?.layer.borderColor = #colorLiteral(red: 1, green: 0.7014456987, blue: 0, alpha: 1)
                 
             } else if alert == "danger" {
                 //red
-                temperatureBox?.backgroundColor = .init(red: 224, green: 132, blue: 32, alpha: 0.08)
-                temperatureBox?.layer.borderColor = .init(red: 224, green: 132, blue: 32, alpha: 1)
-                
-                //iconColor = .init(red: 224, green: 132, blue: 32, alpha: 1)
+                temperatureBox?.backgroundColor = #colorLiteral(red: 0.8771819472, green: 0.1257886291, blue: 0.1278358102, alpha: 0.08)
+                temperatureBox?.layer.borderColor =  #colorLiteral(red: 0.8771819472, green: 0.1257886291, blue: 0.1278358102, alpha: 1)
                 
             } else {
                 //grey
-                temperatureBox?.backgroundColor = .init(red: 249, green: 249, blue: 249, alpha: 1)
-                temperatureBox?.layer.borderColor = .init(red: 178, green: 178, blue: 178, alpha: 1)
-                //iconColor = .clear
+                temperatureBox?.backgroundColor = #colorLiteral(red: 0.9763854146, green: 0.9765252471, blue: 0.9763546586, alpha: 1)
+                temperatureBox?.layer.borderColor = #colorLiteral(red: 0.6979769468, green: 0.6980791688, blue: 0.6979545951, alpha: 1)
             }
                 
             }
-            
         }
     }
 }

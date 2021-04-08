@@ -10,6 +10,8 @@ import UIKit
 class AllAlertViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var alertCollectionView: UICollectionView!
+    
+    var alertData = Alert.generateDummyAlert()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,15 +21,14 @@ class AllAlertViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        print("alert data", alertData.count)
+        return alertData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let alertCell = collectionView.dequeueReusableCell(withReuseIdentifier: "allAlertCollectionCell", for: indexPath) as! CustomAlertCollectionViewCell
-        
-        alertCell.poolTitle!.text = "Kolam 1"
-        alertCell.temperatureDetail?.text = "23 C"
+        alertCell.alerts = alertData[indexPath.row]
         
         
         return alertCell

@@ -10,6 +10,7 @@ import UIKit
 class TemperatureViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var poolData: [Pool] = Pool.generateDummyPool()
+    var alertData: [Pool] = Alert.generateDummyAlert()
     var isDataEmpty = true
     
     //Main Section
@@ -58,7 +59,7 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
     //CollectionView Func
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.alertCollectionView {
-            return 3
+            return alertData.count
         } else {
             return poolData.count
         }
@@ -75,7 +76,7 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
         } else {
             let alertCell = collectionView.dequeueReusableCell(withReuseIdentifier: "alertCollectionCell", for: indexPath) as! CustomAlertCollectionViewCell
             
-            alertCell.poolTitle?.text = "dsadsadsads"
+            alertCell.alerts = alertData[indexPath.row]
             
             
             return alertCell
