@@ -14,6 +14,10 @@ class SettingsViewController: UIViewController {
         performSegue(withIdentifier: "goToTemperatureSetting", sender: self)
     }
     
+    @IBAction func buttonAkun(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToLogin", sender: self)
+    }
+    
     @IBOutlet weak var viewPeringatanSuhu: UIView!
     @IBOutlet weak var viewAkun: UIView!
     @IBOutlet weak var viewBantuan: UIView!
