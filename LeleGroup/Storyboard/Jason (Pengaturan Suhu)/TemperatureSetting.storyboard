@@ -124,6 +124,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="UTg-4A-cOj"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="stepperValue3:" destination="1oo-T0-MvW" eventType="valueChanged" id="ZXD-Ri-2qT"/>
+                                        </connections>
                                     </stepper>
                                 </subviews>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.12549019610000001" blue="0.12549019610000001" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -161,6 +164,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="7bB-7b-zDH"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="stepperValue4:" destination="1oo-T0-MvW" eventType="valueChanged" id="nUc-02-6KU"/>
+                                        </connections>
                                     </stepper>
                                 </subviews>
                                 <color key="backgroundColor" red="0.87843137250000003" green="0.12549019610000001" blue="0.12549019610000001" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
@@ -178,10 +184,24 @@
                                     <constraint firstItem="3ER-93-5kV" firstAttribute="top" secondItem="UxV-6I-1Hg" secondAttribute="bottom" constant="9" id="z7C-7D-7Bf"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daM-yX-57r">
+                                <rect key="frame" x="26" y="805" width="362" height="46"/>
+                                <color key="backgroundColor" red="0.29021158809999997" green="0.40041643380000003" blue="0.27894061799999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="2yr-Wd-0Wd"/>
+                                </constraints>
+                                <state key="normal" title="Simpan">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="simpanSuhu:" destination="1oo-T0-MvW" eventType="touchUpInside" id="dU9-I4-mBl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b5Y-5U-Qd7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="daM-yX-57r" firstAttribute="leading" secondItem="s5G-ie-5II" secondAttribute="leading" id="0rN-Gf-kQ8"/>
                             <constraint firstItem="5ho-EI-w5F" firstAttribute="top" secondItem="DpT-qu-aRy" secondAttribute="bottom" constant="19" id="1Ch-Bp-Rcl"/>
                             <constraint firstItem="0DW-o3-4XD" firstAttribute="width" secondItem="ajP-v3-yez" secondAttribute="width" multiplier="0.85" id="2iN-pg-f3R"/>
                             <constraint firstItem="9gu-Ak-8p1" firstAttribute="leading" secondItem="s5G-ie-5II" secondAttribute="trailing" constant="34" id="98q-9M-dBw"/>
@@ -197,6 +217,8 @@
                             <constraint firstItem="0DW-o3-4XD" firstAttribute="height" secondItem="ajP-v3-yez" secondAttribute="height" multiplier="0.025" id="T3V-zx-ZRb"/>
                             <constraint firstItem="0DW-o3-4XD" firstAttribute="leading" secondItem="5ho-EI-w5F" secondAttribute="leading" id="TBi-FV-uSi"/>
                             <constraint firstItem="DpT-qu-aRy" firstAttribute="leading" secondItem="b5Y-5U-Qd7" secondAttribute="leading" constant="26" id="VHG-og-bAw"/>
+                            <constraint firstItem="daM-yX-57r" firstAttribute="centerX" secondItem="ajP-v3-yez" secondAttribute="centerX" id="YWH-HH-2MT"/>
+                            <constraint firstItem="b5Y-5U-Qd7" firstAttribute="bottom" secondItem="daM-yX-57r" secondAttribute="bottom" constant="11" id="Zqr-gV-Tfv"/>
                             <constraint firstItem="9gu-Ak-8p1" firstAttribute="top" secondItem="aBa-Z5-Wcf" secondAttribute="bottom" constant="67" id="fsw-Ub-REl"/>
                             <constraint firstItem="aBa-Z5-Wcf" firstAttribute="centerY" secondItem="DpT-qu-aRy" secondAttribute="centerY" constant="-1" id="g6z-1O-ped"/>
                             <constraint firstItem="DpT-qu-aRy" firstAttribute="top" secondItem="0DW-o3-4XD" secondAttribute="bottom" constant="25" id="kDa-sI-Gaf"/>
@@ -212,8 +234,11 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="simpan" destination="daM-yX-57r" id="hc8-Xu-3GB"/>
                         <outlet property="stepper" destination="UL1-tY-JEj" id="iRa-SI-f9l"/>
                         <outlet property="stepper2" destination="Vb7-mS-iPO" id="4DH-gq-Rvb"/>
+                        <outlet property="stepper3" destination="nQZ-24-Hhw" id="gHO-ls-FS2"/>
+                        <outlet property="stepper4" destination="bWz-3m-e5t" id="FAQ-QJ-ehF"/>
                         <outlet property="temperatureLabel" destination="ABr-Ln-YDG" id="YZM-Rs-MzD"/>
                         <outlet property="temperatureLabel2" destination="aor-BI-LYR" id="qyn-Zp-g0g"/>
                         <outlet property="temperatureLabel3" destination="wbZ-qC-2IS" id="oWh-gF-6A7"/>

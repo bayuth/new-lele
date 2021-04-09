@@ -14,9 +14,15 @@ class SettingsViewController: UIViewController {
         performSegue(withIdentifier: "goToTemperatureSetting", sender: self)
     }
     
+    @IBOutlet weak var viewPeringatanSuhu: UIView!
+    @IBOutlet weak var viewAkun: UIView!
+    @IBOutlet weak var viewBantuan: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewPeringatanSuhu.layer.cornerRadius = 10
+        viewAkun.layer.cornerRadius = 10
+        viewBantuan.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
     
