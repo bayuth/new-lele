@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5E522303261F35E000C0987D /* TemperatureSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E522302261F35E000C0987D /* TemperatureSetting.swift */; };
+		5ECB8E3E262466B00053CE29 /* BatasSuhu+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB8E3C262466B00053CE29 /* BatasSuhu+CoreDataClass.swift */; };
+		5ECB8E3F262466B00053CE29 /* BatasSuhu+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB8E3D262466B00053CE29 /* BatasSuhu+CoreDataProperties.swift */; };
 		752F6CDA261F187300BA4362 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F6CD9261F187300BA4362 /* CustomCell.swift */; };
 		BF9B1C52261D9710006FE7BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C51261D9710006FE7BE /* AppDelegate.swift */; };
 		BF9B1C54261D9710006FE7BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C53261D9710006FE7BE /* SceneDelegate.swift */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		5E522302261F35E000C0987D /* TemperatureSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureSetting.swift; sourceTree = "<group>"; };
+		5ECB8E3C262466B00053CE29 /* BatasSuhu+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BatasSuhu+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5ECB8E3D262466B00053CE29 /* BatasSuhu+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BatasSuhu+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		752F6CD9261F187300BA4362 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCell.swift; path = "LeleGroup/Custom Style/CustomCell.swift"; sourceTree = SOURCE_ROOT; };
 		BF9B1C4E261D9710006FE7BE /* LeleGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeleGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9B1C51261D9710006FE7BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5ECB8E41262466CC0053CE29 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5ECB8E3C262466B00053CE29 /* BatasSuhu+CoreDataClass.swift */,
+				5ECB8E3D262466B00053CE29 /* BatasSuhu+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BF9B1C45261D9710006FE7BE = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +103,7 @@
 		BF9B1C50261D9710006FE7BE /* LeleGroup */ = {
 			isa = PBXGroup;
 			children = (
+				5ECB8E41262466CC0053CE29 /* Model */,
 				BF9B1C51261D9710006FE7BE /* AppDelegate.swift */,
 				BF9B1C53261D9710006FE7BE /* SceneDelegate.swift */,
 				BF9B1C8B261DE6CC006FE7BE /* Storyboard */,
@@ -272,6 +286,7 @@
 				F98B9AA6261EBAA700DABC18 /* Button.swift in Sources */,
 				752F6CDA261F187300BA4362 /* CustomCell.swift in Sources */,
 				BF9B1C87261DB66A006FE7BE /* AllAlertViewController.swift in Sources */,
+				5ECB8E3E262466B00053CE29 /* BatasSuhu+CoreDataClass.swift in Sources */,
 				BF9B1C9A261DEA3A006FE7BE /* HistoryTableViewController.swift in Sources */,
 				BF9B1C5C261D9710006FE7BE /* LeleGroup.xcdatamodeld in Sources */,
 				BF9B1C52261D9710006FE7BE /* AppDelegate.swift in Sources */,
@@ -279,6 +294,7 @@
 				BF9B1C54261D9710006FE7BE /* SceneDelegate.swift in Sources */,
 				F98B9AA3261EA53600DABC18 /* LoginViewController.swift in Sources */,
 				BF9B1C9E261DEA6D006FE7BE /* SettingsViewController.swift in Sources */,
+				5ECB8E3F262466B00053CE29 /* BatasSuhu+CoreDataProperties.swift in Sources */,
 				5E522303261F35E000C0987D /* TemperatureSetting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

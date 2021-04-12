@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D75" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="BatasSuhu" representedClassName=".BatasSuhu" isAbstract="YES" syncable="YES">
+        <attribute name="suhuKritisAtas" optional="YES" attributeType="Integer 64" defaultValueString="30" usesScalarValueType="YES"/>
+        <attribute name="suhuKritisBawah" optional="YES" attributeType="Integer 64" defaultValueString="20" usesScalarValueType="YES"/>
+        <attribute name="suhuKuningAtas" optional="YES" attributeType="Integer 64" defaultValueString="28" usesScalarValueType="YES"/>
+        <attribute name="suhuKuningBawah" optional="YES" attributeType="Integer 64" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="BatasSuhu" positionX="-63" positionY="-18" width="128" height="89"/>
+    </elements>
 </model>

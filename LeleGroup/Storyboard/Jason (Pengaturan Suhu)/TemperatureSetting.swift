@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class TemperatureSetting : UIViewController {
     
@@ -27,8 +28,22 @@ class TemperatureSetting : UIViewController {
     @IBOutlet weak var stepper3: UIStepper!
     @IBOutlet weak var stepper4: UIStepper!
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    var suhu:[BatasSuhu] = []
+    
+    func tesCoreData(){
+        do{
+            self.suhu = try context.fetch(BatasSuhu.fetchRequest())
+        }
+        catch{}
+        
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tesCoreData()
         
         simpan.layer.cornerRadius = 10
         
@@ -49,10 +64,28 @@ class TemperatureSetting : UIViewController {
         temperatureSettingView4.layer.borderWidth = 1
         temperatureSettingView4.layer.borderColor = UIColor.red.cgColor
         
-        stepper.value=22
-        stepper2.value=28
-        stepper3.value=20
-        stepper4.value=30
+        let printSuhu = self.suhu
+        
+        if printSuhu == []{
+                        
+            //Create Batas Suhu Object
+            let newBatasSuhu = BatasSuhu(context: self.context)
+            
+        do {
+            try self.context.save()
+            print("Saved")
+        }
+            catch{
+                print("Error initializing default data")
+            }
+        }
+        
+        self.tesCoreData()
+        
+        stepper.value = Double(suhu[0].suhuKuningBawah)
+        stepper2.value = Double(suhu[0].suhuKuningAtas)
+        stepper3.value = Double(suhu[0].suhuKritisBawah)
+        stepper4.value = Double(suhu[0].suhuKritisAtas)
         
         temperatureLabel.text = String(Int(stepper.value)) + "°C"
         temperatureLabel2.text = String(Int(stepper2.value)) + "°C"
@@ -109,6 +142,37 @@ class TemperatureSetting : UIViewController {
     }
     
     @IBAction func simpanSuhu(_ sender: UIButton) {
+        
+        let alert = UIAlertController (title: "Simpan Suhu", message: "Apakah anda ingin menyimpan suhu?", preferredStyle: .alert)
+        
+        func alertSuccess(){
+            
+            suhu[0].suhuKuningBawah = Int64(stepper.value)
+            suhu[0].suhuKuningAtas = Int64(stepper2.value)
+            suhu[0].suhuKritisBawah = Int64(stepper3.value)
+            suhu[0].suhuKritisAtas = Int64(stepper4.value)
+            
+           
+            
+            do{
+                try self.context.save()
+                
+                
+            } catch {
+                
+            }
+            
+            let alert2 = UIAlertController (title: "Suhu berhasil disimpan", message: nil, preferredStyle: .alert)
+            alert2.addAction(UIAlertAction(title: "Selesai", style: .default, handler: {action in print("Selesai")}))
+            present(alert2, animated: true, completion: nil)
+        }
+        
+        alert.addAction(UIAlertAction(title: "Batalkan", style: .cancel, handler: {action in print("tapped Dismiss")}))
+        
+        alert.addAction(UIAlertAction(title: "Simpan", style: .default, handler: {action in alertSuccess()}))
+        
+        present(alert, animated:true, completion: nil)
+        
     }
     
 }

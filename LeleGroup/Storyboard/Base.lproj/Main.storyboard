@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Temperature View Controller-->
+        <!--Suhu Kolam-->
         <scene sceneID="MUg-y4-eDO">
             <objects>
-                <viewController id="ipY-Wm-7xH" customClass="TemperatureViewController" customModule="LeleGroup" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Suhu Kolam" id="ipY-Wm-7xH" customClass="TemperatureViewController" customModule="LeleGroup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lz2-kU-jEN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -525,7 +525,8 @@
                             <constraint firstItem="nWW-Vd-d9e" firstAttribute="bottom" secondItem="C5T-Sf-zoT" secondAttribute="bottom" constant="3" id="xq2-mw-jyC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HHG-Mn-Mg2"/>
+                    <navigationItem key="navigationItem" title="Suhu Kolam" id="HHG-Mn-Mg2"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="alertCollectionView" destination="TP5-of-29m" id="v8W-nP-AtP"/>
                         <outlet property="alertIsEmptyView" destination="rYH-qF-Rh0" id="85k-qB-P4h"/>
@@ -542,10 +543,10 @@
             </objects>
             <point key="canvasLocation" x="1952.1739130434785" y="-1146.4285714285713"/>
         </scene>
-        <!--All Alert View Controller-->
+        <!--Semua Peringatan-->
         <scene sceneID="Teg-8o-elo">
             <objects>
-                <viewController id="2oL-pi-hHI" customClass="AllAlertViewController" customModule="LeleGroup" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Semua Peringatan" id="2oL-pi-hHI" customClass="AllAlertViewController" customModule="LeleGroup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oSv-nO-Syi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -678,7 +679,7 @@
                             <constraint firstItem="lWE-Ld-UB7" firstAttribute="width" secondItem="oSv-nO-Syi" secondAttribute="width" multiplier="0.9" id="vr6-W9-dVx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nfj-vg-IYL"/>
+                    <navigationItem key="navigationItem" title="Semua Peringatan" id="nfj-vg-IYL"/>
                     <connections>
                         <outlet property="alertCollectionView" destination="lWE-Ld-UB7" id="6jI-yx-1Jn"/>
                     </connections>

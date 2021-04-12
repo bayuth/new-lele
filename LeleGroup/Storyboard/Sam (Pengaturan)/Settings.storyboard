@@ -12,7 +12,7 @@
         <!--Pengaturan-->
         <scene sceneID="xSW-HG-W36">
             <objects>
-                <viewController id="UE6-2O-LeF" customClass="SettingsViewController" customModule="LeleGroup" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Pengaturan" id="UE6-2O-LeF" customClass="SettingsViewController" customModule="LeleGroup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zxt-5T-rOY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20ºC, 32ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRe-Xl-ENS">
-                                        <rect key="frame" x="206.5" y="86" width="86" height="20.5"/>
+                                        <rect key="frame" x="206.5" y="86" width="100.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -70,7 +70,7 @@
                                     <constraint firstItem="NJB-fG-fWG" firstAttribute="height" secondItem="qvx-J8-qXq" secondAttribute="height" id="1Eu-61-qrg"/>
                                     <constraint firstAttribute="bottom" secondItem="GRe-Xl-ENS" secondAttribute="bottom" constant="21.5" id="33k-B0-jcG"/>
                                     <constraint firstItem="NJB-fG-fWG" firstAttribute="centerY" secondItem="qvx-J8-qXq" secondAttribute="centerY" id="AJ9-Oh-6wg"/>
-                                    <constraint firstItem="GRe-Xl-ENS" firstAttribute="width" secondItem="3uf-zf-FiF" secondAttribute="width" multiplier="0.513433" id="D5e-2b-nxy"/>
+                                    <constraint firstItem="GRe-Xl-ENS" firstAttribute="width" secondItem="3uf-zf-FiF" secondAttribute="width" multiplier="0.6" id="D5e-2b-nxy"/>
                                     <constraint firstItem="OWm-Eb-6Qz" firstAttribute="top" secondItem="qvx-J8-qXq" secondAttribute="top" constant="17" id="Gu7-qi-U4v"/>
                                     <constraint firstItem="GRe-Xl-ENS" firstAttribute="height" secondItem="3uf-zf-FiF" secondAttribute="height" multiplier="0.777778" id="HLz-H9-ZxA"/>
                                     <constraint firstItem="OWm-Eb-6Qz" firstAttribute="height" secondItem="qvx-J8-qXq" secondAttribute="height" multiplier="0.1875" id="HP0-NF-pB6"/>
@@ -188,6 +188,8 @@
                         <barButtonItem key="backBarButtonItem" title="Kembali" id="Gsq-Ll-p3V"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="peringatanKritis" destination="GRe-Xl-ENS" id="ce3-f7-zeT"/>
+                        <outlet property="peringatanKuning" destination="3uf-zf-FiF" id="Ixc-cA-64O"/>
                         <outlet property="viewAkun" destination="zs4-tU-ZsB" id="7Jp-TH-60R"/>
                         <outlet property="viewBantuan" destination="tVN-xL-gB1" id="SQg-Up-pEA"/>
                         <outlet property="viewPeringatanSuhu" destination="qvx-J8-qXq" id="p7b-ZU-pCB"/>
