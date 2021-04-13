@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5E522303261F35E000C0987D /* TemperatureSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E522302261F35E000C0987D /* TemperatureSetting.swift */; };
+		5E8CEC092625E98F00A0D7FE /* Peringatan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8CEC032625E98F00A0D7FE /* Peringatan+CoreDataClass.swift */; };
+		5E8CEC0A2625E98F00A0D7FE /* Peringatan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8CEC042625E98F00A0D7FE /* Peringatan+CoreDataProperties.swift */; };
+		5E8CEC0B2625E98F00A0D7FE /* Pengguna+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8CEC052625E98F00A0D7FE /* Pengguna+CoreDataClass.swift */; };
+		5E8CEC0C2625E98F00A0D7FE /* Pengguna+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8CEC062625E98F00A0D7FE /* Pengguna+CoreDataProperties.swift */; };
+		5E8CEC0D2625E98F00A0D7FE /* Kolam+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8CEC072625E98F00A0D7FE /* Kolam+CoreDataClass.swift */; };
+		5E8CEC0E2625E98F00A0D7FE /* Kolam+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8CEC082625E98F00A0D7FE /* Kolam+CoreDataProperties.swift */; };
 		5ECB8E3E262466B00053CE29 /* BatasSuhu+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB8E3C262466B00053CE29 /* BatasSuhu+CoreDataClass.swift */; };
 		5ECB8E3F262466B00053CE29 /* BatasSuhu+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB8E3D262466B00053CE29 /* BatasSuhu+CoreDataProperties.swift */; };
 		752F6CDA261F187300BA4362 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F6CD9261F187300BA4362 /* CustomCell.swift */; };
@@ -39,6 +45,12 @@
 
 /* Begin PBXFileReference section */
 		5E522302261F35E000C0987D /* TemperatureSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureSetting.swift; sourceTree = "<group>"; };
+		5E8CEC032625E98F00A0D7FE /* Peringatan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Peringatan+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		5E8CEC042625E98F00A0D7FE /* Peringatan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Peringatan+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		5E8CEC052625E98F00A0D7FE /* Pengguna+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pengguna+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		5E8CEC062625E98F00A0D7FE /* Pengguna+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pengguna+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		5E8CEC072625E98F00A0D7FE /* Kolam+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kolam+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		5E8CEC082625E98F00A0D7FE /* Kolam+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kolam+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		5ECB8E3C262466B00053CE29 /* BatasSuhu+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BatasSuhu+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5ECB8E3D262466B00053CE29 /* BatasSuhu+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BatasSuhu+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		752F6CD9261F187300BA4362 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCell.swift; path = "LeleGroup/Custom Style/CustomCell.swift"; sourceTree = SOURCE_ROOT; };
@@ -84,6 +96,12 @@
 		5ECB8E41262466CC0053CE29 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E8CEC032625E98F00A0D7FE /* Peringatan+CoreDataClass.swift */,
+				5E8CEC042625E98F00A0D7FE /* Peringatan+CoreDataProperties.swift */,
+				5E8CEC052625E98F00A0D7FE /* Pengguna+CoreDataClass.swift */,
+				5E8CEC062625E98F00A0D7FE /* Pengguna+CoreDataProperties.swift */,
+				5E8CEC072625E98F00A0D7FE /* Kolam+CoreDataClass.swift */,
+				5E8CEC082625E98F00A0D7FE /* Kolam+CoreDataProperties.swift */,
 				5ECB8E3C262466B00053CE29 /* BatasSuhu+CoreDataClass.swift */,
 				5ECB8E3D262466B00053CE29 /* BatasSuhu+CoreDataProperties.swift */,
 			);
@@ -294,23 +312,29 @@
 			files = (
 				BF9B1C84261DB5A8006FE7BE /* Extension.swift in Sources */,
 				BF9B1C80261DB50C006FE7BE /* CustomAlertCollectionViewCell.swift in Sources */,
+				5E8CEC0E2625E98F00A0D7FE /* Kolam+CoreDataProperties.swift in Sources */,
 				BFDE6A3E2625B6CF001B1B33 /* UserProfileViewController.swift in Sources */,
 				BF9B1C72261DACD7006FE7BE /* Alert.swift in Sources */,
+				5E8CEC0D2625E98F00A0D7FE /* Kolam+CoreDataClass.swift in Sources */,
 				BF9B1C7D261DB4F8006FE7BE /* CustomPoolCollectionViewCell.swift in Sources */,
 				BF9B1C56261D9710006FE7BE /* TemperatureViewController.swift in Sources */,
+				5E8CEC092625E98F00A0D7FE /* Peringatan+CoreDataClass.swift in Sources */,
 				F98B9AA6261EBAA700DABC18 /* Button.swift in Sources */,
 				752F6CDA261F187300BA4362 /* CustomCell.swift in Sources */,
 				BF9B1C87261DB66A006FE7BE /* AllAlertViewController.swift in Sources */,
 				5ECB8E3E262466B00053CE29 /* BatasSuhu+CoreDataClass.swift in Sources */,
 				BF9B1C9A261DEA3A006FE7BE /* HistoryTableViewController.swift in Sources */,
+				5E8CEC0B2625E98F00A0D7FE /* Pengguna+CoreDataClass.swift in Sources */,
 				BF9B1C5C261D9710006FE7BE /* LeleGroup.xcdatamodeld in Sources */,
 				BF9B1C52261D9710006FE7BE /* AppDelegate.swift in Sources */,
+				5E8CEC0C2625E98F00A0D7FE /* Pengguna+CoreDataProperties.swift in Sources */,
 				BF9B1C6D261DAC8D006FE7BE /* Pool.swift in Sources */,
 				BF9B1C54261D9710006FE7BE /* SceneDelegate.swift in Sources */,
 				F98B9AA3261EA53600DABC18 /* LoginViewController.swift in Sources */,
 				BF9B1C9E261DEA6D006FE7BE /* SettingsViewController.swift in Sources */,
 				5ECB8E3F262466B00053CE29 /* BatasSuhu+CoreDataProperties.swift in Sources */,
 				5E522303261F35E000C0987D /* TemperatureSetting.swift in Sources */,
+				5E8CEC0A2625E98F00A0D7FE /* Peringatan+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

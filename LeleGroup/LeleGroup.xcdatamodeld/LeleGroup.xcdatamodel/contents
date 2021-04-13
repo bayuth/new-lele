@@ -6,7 +6,30 @@
         <attribute name="suhuKuningAtas" optional="YES" attributeType="Integer 64" defaultValueString="28" usesScalarValueType="YES"/>
         <attribute name="suhuKuningBawah" optional="YES" attributeType="Integer 64" usesScalarValueType="YES"/>
     </entity>
+    <entity name="Kolam" representedClassName=".Kolam" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="nama" optional="YES" attributeType="String"/>
+        <relationship name="pengguna" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pengguna" inverseName="kolam" inverseEntity="Pengguna"/>
+        <relationship name="peringatan" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Peringatan" inverseName="kolam" inverseEntity="Peringatan"/>
+    </entity>
+    <entity name="Pengguna" representedClassName=".Pengguna" syncable="YES">
+        <attribute name="jumlahKolam" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="nama" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <relationship name="kolam" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Kolam" inverseName="pengguna" inverseEntity="Kolam"/>
+    </entity>
+    <entity name="Peringatan" representedClassName=".Peringatan" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="lastUpdate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="temperature" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="kolam" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Kolam" inverseName="peringatan" inverseEntity="Kolam"/>
+    </entity>
     <elements>
-        <element name="BatasSuhu" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="BatasSuhu" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Pengguna" positionX="-7.501220703125" positionY="162.3454895019531" width="128" height="103"/>
+        <element name="Kolam" positionX="168.953369140625" positionY="269.3126831054688" width="128" height="103"/>
+        <element name="Peringatan" positionX="291.994384765625" positionY="-29.35232543945312" width="128" height="133"/>
     </elements>
 </model>
