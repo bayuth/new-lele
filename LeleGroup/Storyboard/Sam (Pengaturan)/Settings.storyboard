@@ -18,40 +18,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qvx-J8-qXq">
-                                <rect key="frame" x="20.5" y="64" width="373" height="128"/>
+                                <rect key="frame" x="20.5" y="64" width="373" height="113"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Peringatan Suhu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWm-Eb-6Qz">
-                                        <rect key="frame" x="19" y="17" width="335" height="24"/>
+                                        <rect key="frame" x="19" y="17" width="335" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peringatan Kritis      : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuc-bh-3FM">
-                                        <rect key="frame" x="20" y="82.5" width="186.5" height="20.5"/>
+                                        <rect key="frame" x="20" y="79" width="186.5" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22ºC, 30ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uf-zf-FiF">
-                                        <rect key="frame" x="206.5" y="52.5" width="167.5" height="26.5"/>
+                                        <rect key="frame" x="206.5" y="49.5" width="167.5" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20ºC, 32ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRe-Xl-ENS">
-                                        <rect key="frame" x="206.5" y="86" width="100.5" height="20.5"/>
+                                        <rect key="frame" x="206.5" y="76.5" width="100.5" height="15"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peringatan Kuning   : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQ2-3d-O0l">
-                                        <rect key="frame" x="20" y="49" width="186.5" height="26.5"/>
+                                        <rect key="frame" x="20" y="46" width="186.5" height="26"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJB-fG-fWG">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="113"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="tintColor" red="0.42772465939999998" green="0.44668376450000002" blue="0.47059190270000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
@@ -95,7 +95,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVN-xL-gB1">
-                                <rect key="frame" x="20" y="286" width="374" height="55"/>
+                                <rect key="frame" x="20" y="271" width="374" height="55"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Bantuan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6n-1e-5Ti">
                                         <rect key="frame" x="19" y="17" width="336" height="21"/>
@@ -133,7 +133,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zs4-tU-ZsB">
-                                <rect key="frame" x="20" y="212" width="374" height="54"/>
+                                <rect key="frame" x="20" y="197" width="374" height="54"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91u-bm-YVz">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="54"/>
@@ -176,7 +176,6 @@
                             <constraint firstItem="tVN-xL-gB1" firstAttribute="width" secondItem="91u-bm-YVz" secondAttribute="width" id="82m-ZJ-Lh0"/>
                             <constraint firstItem="qvx-J8-qXq" firstAttribute="top" secondItem="vcm-BI-sWz" secondAttribute="top" constant="20" id="AXY-ad-qmE"/>
                             <constraint firstItem="zs4-tU-ZsB" firstAttribute="centerX" secondItem="qvx-J8-qXq" secondAttribute="centerX" id="CEm-KP-cSa"/>
-                            <constraint firstItem="qvx-J8-qXq" firstAttribute="height" secondItem="zxt-5T-rOY" secondAttribute="height" multiplier="0.142857" id="MFL-4c-D1D"/>
                             <constraint firstItem="tVN-xL-gB1" firstAttribute="top" secondItem="zs4-tU-ZsB" secondAttribute="bottom" constant="20" id="eCY-QL-7ug"/>
                             <constraint firstItem="tVN-xL-gB1" firstAttribute="height" secondItem="91u-bm-YVz" secondAttribute="height" multiplier="1.02459" id="hBE-bb-gSU"/>
                             <constraint firstItem="zs4-tU-ZsB" firstAttribute="top" secondItem="qvx-J8-qXq" secondAttribute="bottom" constant="20" id="hp3-J7-6iv"/>
@@ -198,6 +197,7 @@
                         <outlet property="viewPeringatanSuhu" destination="qvx-J8-qXq" id="p7b-ZU-pCB"/>
                         <segue destination="x0l-n1-2BN" kind="show" identifier="goToTemperatureSetting" id="uNj-zV-aVY"/>
                         <segue destination="fj7-sD-rrF" kind="show" identifier="goToLogin" id="jsA-Zc-Ick"/>
+                        <segue destination="pvP-l2-LjW" kind="show" identifier="goToProfile" id="IQ4-Ur-fTU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g2Q-Cb-E5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -223,6 +223,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgK-UR-HUH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1151" y="88"/>
+        </scene>
+        <!--userProfileSB-->
+        <scene sceneID="zkX-QC-wpg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="userProfileSB" id="pvP-l2-LjW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ybk-4N-gw1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b9b-zN-qut" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991" y="191"/>
         </scene>
     </scenes>
     <resources>

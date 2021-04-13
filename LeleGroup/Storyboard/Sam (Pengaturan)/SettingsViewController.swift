@@ -9,13 +9,19 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    
+    var isLogin = false
     @IBAction func showTemperatureSetting(_ sender: UIButton) {
         performSegue(withIdentifier: "goToTemperatureSetting", sender: self)
     }
     
     @IBAction func buttonAkun(_ sender: UIButton) {
-        performSegue(withIdentifier: "goToLogin", sender: self)
+        
+        if isLogin{
+        performSegue(withIdentifier: "goToProfile", sender: self)
+        } else {
+            performSegue(withIdentifier: "goToLogin", sender: self)
+        }
+        
     }
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext

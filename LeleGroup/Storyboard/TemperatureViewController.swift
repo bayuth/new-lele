@@ -24,7 +24,7 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
         }
         catch{}
     }
-
+    
     
     //Main Section
     @IBOutlet weak var temperatureIsEmptyView: UIView!
@@ -62,18 +62,21 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
         let printSuhu = self.suhu
         
         if printSuhu == []{
-                        
+            
             //Create Batas Suhu Object
             let newBatasSuhu = BatasSuhu(context: self.context)
             
-        do {
-            try self.context.save()
-            print("Saved")
-        }
+            do {
+                try self.context.save()
+                print("Saved")
+            }
             catch{
                 print("Error initializing default data")
             }
         }
+        
+        //connect to Mqtt
+        mqttSetting()
         
         if !checkIsDataEmpty(poolData.count) {
             temperatureIsEmptyView.isHidden = true
@@ -93,10 +96,10 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
             alertIsEmptyView.isHidden = false
             alertIsNotEmptyView.isHidden = true
         }
-       
-        mqttSetting()
         
-       
+        
+        
+        
     }
     
     //Mqtt
@@ -132,7 +135,7 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
         } else if collectionView == self.alertCollectionView {
             let alertCell = collectionView.dequeueReusableCell(withReuseIdentifier: "alertCollectionCell", for: indexPath) as! CustomAlertCollectionViewCell
             alertCell.alerts = alertData[indexPath.row]
-    
+            
             return alertCell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "alertCollectionCell", for: indexPath) as! CustomAlertCollectionViewCell
@@ -144,9 +147,9 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
     //Made Function
     func checkIsDataEmpty(_ data:Int) -> Bool {
         if data == 0 {
-           return true
+            return true
         } else {
-        return false
+            return false
         }
     }
     
@@ -161,10 +164,10 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
         case 2:
             url = URL(string: "https://api.whatsapp.com/send?phone=\(phoneNumber)")!
             if UIApplication.shared.canOpenURL(url) {
-               print("whatsapp installed")
+                print("whatsapp installed")
             } else {
                 url = URL(string: "https://wa.me/\(phoneNumber)")!
-               print("whatsapp not installed")
+                print("whatsapp not installed")
             }
         case 3:
             url = URL(string: "tel:\(phoneNumber)")!
@@ -173,8 +176,8 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
         }
         
         if UIApplication.shared.canOpenURL(url) {
-               UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            }
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
     
     func runDataSourceAndDelegate () {
@@ -202,12 +205,10 @@ extension TemperatureViewController: CocoaMQTTDelegate {
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didConnectAck ack: CocoaMQTTConnAck) {
-  
-
         if ack == .accept {
             mqtt.subscribe("samuelmaynard13@gmail.com/testing1", qos: CocoaMQTTQoS.qos1)
             
-            print("berhasil yey")
+            print("MQTT is Connected")
         }
     }
     
@@ -242,7 +243,7 @@ extension TemperatureViewController: CocoaMQTTDelegate {
     func mqttDidReceivePong(_ mqtt: CocoaMQTT) {
         print()
     }
-
+    
     func mqttDidDisconnect(_ mqtt: CocoaMQTT, withError err: Error?) {
         print("\(err?.localizedDescription)")
     }
