@@ -11,7 +11,8 @@ import CocoaMQTT
 class TemperatureViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var poolData: [Pool] = Pool.generateDummyPool()
-    var alertData: [Pool] = Alert.generateDummyAlert()
+//    var alertData: [Pool] = Alert.generateDummyAlert()
+    var alertData = [Pool]()
     var isDataEmpty = true
     
     //initialized core data
@@ -105,6 +106,7 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
     
     //Mqtt
     var mqtt: CocoaMQTT?
+    var isMqttConnected = false
     func mqttSetting() {
         let clientID = "CocoaMQTT-" + String(ProcessInfo().processIdentifier)
         mqtt = CocoaMQTT(clientID: clientID, host: "maqiatto.com", port: 1883)
@@ -208,8 +210,13 @@ extension TemperatureViewController: CocoaMQTTDelegate {
     func mqtt(_ mqtt: CocoaMQTT, didConnectAck ack: CocoaMQTTConnAck) {
         if ack == .accept {
             mqtt.subscribe("samuelmaynard13@gmail.com/testing1", qos: CocoaMQTTQoS.qos1)
+            isMqttConnected = true
             
             print("MQTT is Connected")
+        }
+        else{
+            isMqttConnected = false
+            print("MQTT is not connected")
         }
     }
     
@@ -226,7 +233,15 @@ extension TemperatureViewController: CocoaMQTTDelegate {
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16 ) {
-        print("didReceiveMessage", message.string!, message.topic)
+        var info = message.string!
+        let start = info.index(info.startIndex, offsetBy: 11)
+        let end = info.index(info.endIndex, offsetBy: -12)
+        let range = start..<end
+        let mySubstring = info[range]
+        let temp = Double(mySubstring)
+        
+//        print(mySubstring, temp)
+//        print("didReceiveMessage", message.string!, message.topic)
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didSubscribeTopics success: NSDictionary, failed: [String]) {
