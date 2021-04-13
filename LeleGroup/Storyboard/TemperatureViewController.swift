@@ -77,6 +77,7 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
         if !checkIsDataEmpty(poolData.count) {
             temperatureIsEmptyView.isHidden = true
             temperatureIsNotEmptyView.isHidden = false
+            showAllAlertOutlet.setTitle("Lihat semua (\(alertData.count))", for: .normal)
             runDataSourceAndDelegate()
         } else {
             temperatureIsEmptyView.isHidden = false
@@ -88,8 +89,8 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
             alertIsNotEmptyView.isHidden = false
             runDataSourceAndDelegate()
         } else {
-            temperatureIsEmptyView.isHidden = false
-            temperatureIsNotEmptyView.isHidden = true
+            alertIsEmptyView.isHidden = false
+            alertIsNotEmptyView.isHidden = true
         }
        
        
