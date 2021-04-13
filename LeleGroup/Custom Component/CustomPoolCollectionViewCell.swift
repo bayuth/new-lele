@@ -16,6 +16,7 @@ class CustomPoolCollectionViewCell: UICollectionViewCell {
         didSet{
             poolTitle?.text = pool?.name
             temperatureDetail?.text = "\(pool?.alert.temperature.toString ?? "") °C"
+            temperatureBox.layer.cornerRadius = 10
             
             if !(pool?.alert.isActive ?? true) {
                 temperatureDetail.textColor = .white

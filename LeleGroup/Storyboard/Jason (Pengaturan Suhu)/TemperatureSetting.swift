@@ -50,19 +50,19 @@ class TemperatureSetting : UIViewController {
         //setting tampilan kotak
         temperatureSettingView.layer.cornerRadius = 20
         temperatureSettingView.layer.borderWidth = 1
-        temperatureSettingView.layer.borderColor = UIColor.yellow.cgColor
+        temperatureSettingView.layer.borderColor = #colorLiteral(red: 1, green: 0.7014456987, blue: 0, alpha: 1)
         
         temperatureSettingView2.layer.cornerRadius = 20
         temperatureSettingView2.layer.borderWidth = 1
-        temperatureSettingView2.layer.borderColor = UIColor.yellow.cgColor
+        temperatureSettingView2.layer.borderColor = #colorLiteral(red: 1, green: 0.7014456987, blue: 0, alpha: 1)
         
         temperatureSettingView3.layer.cornerRadius = 20
         temperatureSettingView3.layer.borderWidth = 1
-        temperatureSettingView3.layer.borderColor = UIColor.red.cgColor
+        temperatureSettingView3.layer.borderColor = #colorLiteral(red: 0.8771819472, green: 0.1257886291, blue: 0.1278358102, alpha: 1)
         
         temperatureSettingView4.layer.cornerRadius = 20
         temperatureSettingView4.layer.borderWidth = 1
-        temperatureSettingView4.layer.borderColor = UIColor.red.cgColor
+        temperatureSettingView4.layer.borderColor = #colorLiteral(red: 0.8771819472, green: 0.1257886291, blue: 0.1278358102, alpha: 1)
         
         let printSuhu = self.suhu
         
@@ -163,7 +163,9 @@ class TemperatureSetting : UIViewController {
             }
             
             let alert2 = UIAlertController (title: "Suhu berhasil disimpan", message: nil, preferredStyle: .alert)
-            alert2.addAction(UIAlertAction(title: "Selesai", style: .default, handler: {action in print("Selesai")}))
+            alert2.addAction(UIAlertAction(title: "Selesai", style: .default, handler: {action in print("Selesai")
+                self.navigationController?.popViewController(animated: true)
+            }))
             present(alert2, animated: true, completion: nil)
         }
         

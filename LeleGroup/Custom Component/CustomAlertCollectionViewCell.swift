@@ -19,6 +19,7 @@ class CustomAlertCollectionViewCell: UICollectionViewCell {
             poolTitle?.text = alerts?.name
             
             temperatureDetail?.text = "\(alerts?.alert.temperature.toString ?? "") °C"
+            temperatureBox!.layer.cornerRadius = 10
             
             let alert = alerts?.alert.status
             temperatureBox?.layer.borderWidth = 1
