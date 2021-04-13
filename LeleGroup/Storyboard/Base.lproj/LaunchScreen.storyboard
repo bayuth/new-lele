@@ -17,34 +17,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bry-6r-awt" userLabel="bg">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaI-tC-yHx" userLabel="Centre">
-                                        <rect key="frame" x="0.0" y="229" width="414" height="360"/>
+                                        <rect key="frame" x="0.0" y="251" width="414" height="394"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L E L E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXY-2m-Uck">
-                                                <rect key="frame" x="41.5" y="162" width="331" height="36"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="46"/>
-                                                <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monitor Suhu Kolam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3R-ea-bez">
-                                                <rect key="frame" x="41.5" y="206" width="331" height="26"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                                <color key="textColor" red="0.84706455469999997" green="0.84704858059999999" blue="0.84705936910000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XqV-xn-0lV">
+                                                <rect key="frame" x="117" y="73.5" width="180" height="247.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="kgm-yk-fsn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="180" id="RzT-vy-fFr"/>
+                                                            <constraint firstAttribute="height" constant="180" id="Yz9-57-hRS"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L E L E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXY-2m-Uck">
+                                                        <rect key="frame" x="0.0" y="180" width="180" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                                        <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monitor Suhu Kolam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3R-ea-bez">
+                                                        <rect key="frame" x="0.0" y="228" width="180" height="19.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                        <color key="textColor" red="0.84706455469999997" green="0.84704858059999999" blue="0.84705936910000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="rXY-2m-Uck" firstAttribute="height" secondItem="qaI-tC-yHx" secondAttribute="height" multiplier="0.1" id="7nk-8m-uHA"/>
-                                            <constraint firstItem="rXY-2m-Uck" firstAttribute="centerY" secondItem="qaI-tC-yHx" secondAttribute="centerY" id="Drb-NU-va2"/>
-                                            <constraint firstItem="d3R-ea-bez" firstAttribute="centerX" secondItem="qaI-tC-yHx" secondAttribute="centerX" id="Mjw-oq-Nxe"/>
-                                            <constraint firstItem="rXY-2m-Uck" firstAttribute="width" secondItem="qaI-tC-yHx" secondAttribute="width" multiplier="0.8" id="f7L-Xd-uzV"/>
-                                            <constraint firstItem="rXY-2m-Uck" firstAttribute="centerX" secondItem="qaI-tC-yHx" secondAttribute="centerX" id="fKB-QT-7s3"/>
-                                            <constraint firstItem="d3R-ea-bez" firstAttribute="top" secondItem="rXY-2m-Uck" secondAttribute="bottom" constant="8" symbolic="YES" id="qKg-gp-GmU"/>
-                                            <constraint firstItem="d3R-ea-bez" firstAttribute="width" secondItem="qaI-tC-yHx" secondAttribute="width" multiplier="0.799517" id="slL-X8-hb6"/>
-                                            <constraint firstItem="d3R-ea-bez" firstAttribute="height" secondItem="qaI-tC-yHx" secondAttribute="height" multiplier="0.0725389" id="zm1-ev-7Bp"/>
+                                            <constraint firstItem="XqV-xn-0lV" firstAttribute="centerY" secondItem="qaI-tC-yHx" secondAttribute="centerY" id="6B9-q5-0de"/>
+                                            <constraint firstItem="XqV-xn-0lV" firstAttribute="centerX" secondItem="qaI-tC-yHx" secondAttribute="centerX" id="W4u-0V-YPe"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -60,10 +66,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bry-6r-awt" secondAttribute="bottom" id="5lj-Bc-mQM"/>
+                            <constraint firstAttribute="bottom" secondItem="bry-6r-awt" secondAttribute="bottom" id="5lj-Bc-mQM"/>
                             <constraint firstItem="bry-6r-awt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8wb-Fl-xRo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bry-6r-awt" secondAttribute="trailing" id="p4U-eO-0GV"/>
-                            <constraint firstItem="bry-6r-awt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="s5f-7u-ggM"/>
+                            <constraint firstItem="bry-6r-awt" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="s5f-7u-ggM"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -73,6 +79,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LeleLogo" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

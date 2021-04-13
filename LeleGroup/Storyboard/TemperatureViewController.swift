@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CocoaMQTT
 
 class TemperatureViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -93,8 +94,24 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
             alertIsNotEmptyView.isHidden = true
         }
        
+        mqttSetting()
+        
        
     }
+    
+    //Mqtt
+    var mqtt: CocoaMQTT?
+    func mqttSetting() {
+        let clientID = "CocoaMQTT-" + String(ProcessInfo().processIdentifier)
+        mqtt = CocoaMQTT(clientID: clientID, host: "maqiatto.com", port: 1883)
+        mqtt!.username = "samuelmaynard13@gmail.com"
+        mqtt!.password = "samuel13"
+        mqtt!.willMessage = CocoaMQTTMessage(topic: "/will", string: "dieout")
+        mqtt!.keepAlive = 60
+        mqtt!.delegate = self
+        mqtt?.connect()
+    }
+    
     //CollectionView Func
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.alertCollectionView {
@@ -166,4 +183,68 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
         alertCollectionView.delegate = self
     }
 }
+
+extension TemperatureViewController: CocoaMQTTDelegate {
+    // Optional ssl CocoaMQTTDelegate
+    func mqtt(_ mqtt: CocoaMQTT, didReceive trust: SecTrust, completionHandler: @escaping (Bool) -> Void) {
+        
+        /// Validate the server certificate
+        ///
+        /// Some custom validation...
+        ///
+        /// if validatePassed {
+        ///     completionHandler(true)
+        /// } else {
+        ///     completionHandler(false)
+        /// }
+        completionHandler(true)
+    }
+    
+    func mqtt(_ mqtt: CocoaMQTT, didConnectAck ack: CocoaMQTTConnAck) {
+  
+
+        if ack == .accept {
+            mqtt.subscribe("samuelmaynard13@gmail.com/testing1", qos: CocoaMQTTQoS.qos1)
+            
+            print("berhasil yey")
+        }
+    }
+    
+    func mqtt(_ mqtt: CocoaMQTT, didStateChangeTo state: CocoaMQTTConnState) {
+        
+    }
+    
+    func mqtt(_ mqtt: CocoaMQTT, didPublishMessage message: CocoaMQTTMessage, id: UInt16) {
+        
+    }
+    
+    func mqtt(_ mqtt: CocoaMQTT, didPublishAck id: UInt16) {
+        
+    }
+    
+    func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16 ) {
+        print("didReceiveMessage", message.string!, message.topic)
+    }
+    
+    func mqtt(_ mqtt: CocoaMQTT, didSubscribeTopics success: NSDictionary, failed: [String]) {
+        print("subscribed: \(success), failed: \(failed)")
+    }
+    
+    func mqtt(_ mqtt: CocoaMQTT, didUnsubscribeTopics topics: [String]) {
+        print("topic: \(topics)")
+    }
+    
+    func mqttDidPing(_ mqtt: CocoaMQTT) {
+        print()
+    }
+    
+    func mqttDidReceivePong(_ mqtt: CocoaMQTT) {
+        print()
+    }
+
+    func mqttDidDisconnect(_ mqtt: CocoaMQTT, withError err: Error?) {
+        print("\(err?.localizedDescription)")
+    }
+}
+
 

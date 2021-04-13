@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,6 +30,8 @@
 		BF9B1C97261DE90D006FE7BE /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9B1C96261DE90D006FE7BE /* History.storyboard */; };
 		BF9B1C9A261DEA3A006FE7BE /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C99261DEA3A006FE7BE /* HistoryTableViewController.swift */; };
 		BF9B1C9E261DEA6D006FE7BE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C9D261DEA6D006FE7BE /* SettingsViewController.swift */; };
+		BFDE6A39262577CD001B1B33 /* CocoaMQTTWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = BFDE6A38262577CD001B1B33 /* CocoaMQTTWebSocket */; };
+		BFDE6A3B262577CD001B1B33 /* CocoaMQTT in Frameworks */ = {isa = PBXBuildFile; productRef = BFDE6A3A262577CD001B1B33 /* CocoaMQTT */; };
 		F98B9AA3261EA53600DABC18 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B9AA2261EA53600DABC18 /* LoginViewController.swift */; };
 		F98B9AA6261EBAA700DABC18 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98B9AA5261EBAA700DABC18 /* Button.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFDE6A3B262577CD001B1B33 /* CocoaMQTT in Frameworks */,
+				BFDE6A39262577CD001B1B33 /* CocoaMQTTWebSocket in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +224,10 @@
 			dependencies = (
 			);
 			name = LeleGroup;
+			packageProductDependencies = (
+				BFDE6A38262577CD001B1B33 /* CocoaMQTTWebSocket */,
+				BFDE6A3A262577CD001B1B33 /* CocoaMQTT */,
+			);
 			productName = LeleGroup;
 			productReference = BF9B1C4E261D9710006FE7BE /* LeleGroup.app */;
 			productType = "com.apple.product-type.application";
@@ -247,6 +255,9 @@
 				Base,
 			);
 			mainGroup = BF9B1C45261D9710006FE7BE;
+			packageReferences = (
+				BFDE6A37262577CD001B1B33 /* XCRemoteSwiftPackageReference "CocoaMQTT" */,
+			);
 			productRefGroup = BF9B1C4F261D9710006FE7BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -497,6 +508,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BFDE6A37262577CD001B1B33 /* XCRemoteSwiftPackageReference "CocoaMQTT" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/emqx/CocoaMQTT";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BFDE6A38262577CD001B1B33 /* CocoaMQTTWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFDE6A37262577CD001B1B33 /* XCRemoteSwiftPackageReference "CocoaMQTT" */;
+			productName = CocoaMQTTWebSocket;
+		};
+		BFDE6A3A262577CD001B1B33 /* CocoaMQTT */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BFDE6A37262577CD001B1B33 /* XCRemoteSwiftPackageReference "CocoaMQTT" */;
+			productName = CocoaMQTT;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		BF9B1C5A261D9710006FE7BE /* LeleGroup.xcdatamodeld */ = {
