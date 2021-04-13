@@ -13,6 +13,18 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
     var alertData: [Pool] = Alert.generateDummyAlert()
     var isDataEmpty = true
     
+    //initialized core data
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var suhu:[BatasSuhu] = []
+    
+    func tesCoreData(){
+        do{
+            self.suhu = try context.fetch(BatasSuhu.fetchRequest())
+        }
+        catch{}
+    }
+
+    
     //Main Section
     @IBOutlet weak var temperatureIsEmptyView: UIView!
     @IBOutlet weak var temperatureIsNotEmptyView: UIView!
@@ -44,6 +56,23 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //initialized core data
+        let printSuhu = self.suhu
+        
+        if printSuhu == []{
+                        
+            //Create Batas Suhu Object
+            let newBatasSuhu = BatasSuhu(context: self.context)
+            
+        do {
+            try self.context.save()
+            print("Saved")
+        }
+            catch{
+                print("Error initializing default data")
+            }
+        }
         
         if !checkIsDataEmpty(poolData.count) {
             temperatureIsEmptyView.isHidden = true
