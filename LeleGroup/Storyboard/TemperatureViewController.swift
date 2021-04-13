@@ -16,6 +16,7 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
     
     //initialized core data
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     var suhu:[BatasSuhu] = []
     
     func tesCoreData(){

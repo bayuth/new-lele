@@ -95,13 +95,13 @@ class TemperatureSetting : UIViewController {
         //setting stepper
         stepper.isContinuous=true
         stepper.autorepeat=true
-        stepper.maximumValue = stepper2.value - 2
+        stepper.maximumValue = stepper2.value - 1
         stepper.minimumValue = stepper3.value+1
         
         stepper2.isContinuous=true
         stepper2.autorepeat=true
         stepper2.maximumValue = stepper4.value-1
-        stepper2.minimumValue = stepper.value + 2
+        stepper2.minimumValue = stepper.value + 1
         
         stepper3.isContinuous=true
         stepper3.autorepeat=true
@@ -118,14 +118,14 @@ class TemperatureSetting : UIViewController {
     @IBAction func stepperValue(_ sender: UIStepper) {
         temperatureLabel.text = Int(sender.value).description + "°C"
         stepper.value = sender.value
-        stepper2.minimumValue = stepper.value + 2
+        stepper2.minimumValue = stepper.value + 1
         stepper3.maximumValue = stepper.value-1
     }
     
     @IBAction func stepperValue2(_ sender: UIStepper) {
         temperatureLabel2.text = Int(sender.value).description + "°C"
         stepper2.value = sender.value
-        stepper.maximumValue = stepper2.value - 2
+        stepper.maximumValue = stepper2.value - 1
         stepper4.minimumValue = stepper2.value + 1
     }
     
