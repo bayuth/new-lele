@@ -21,6 +21,7 @@ class CustomPoolCollectionViewCell: UICollectionViewCell {
             if !(pool?.alert.isActive ?? true) {
                 temperatureDetail.textColor = .white
                 temperatureBox?.backgroundColor = #colorLiteral(red: 0.4940721393, green: 0.4941467047, blue: 0.4940558076, alpha: 1)
+                poolTitle.textColor =  .white
                 temperatureDetail.text = "Tidak Aktif"
                 
             } else {

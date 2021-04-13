@@ -129,13 +129,14 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
             
             return poolCell
             
-        } else {
+        } else if collectionView == self.alertCollectionView {
             let alertCell = collectionView.dequeueReusableCell(withReuseIdentifier: "alertCollectionCell", for: indexPath) as! CustomAlertCollectionViewCell
-            
             alertCell.alerts = alertData[indexPath.row]
-            
-            
+    
             return alertCell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "alertCollectionCell", for: indexPath) as! CustomAlertCollectionViewCell
+            return cell
         }
         
     }
