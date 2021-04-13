@@ -280,25 +280,25 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1k-Dp-Ssb">
-                                                                    <rect key="frame" x="20.5" y="18.5" width="164" height="87"/>
+                                                                    <rect key="frame" x="25.5" y="18.5" width="154" height="87"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kolam 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5h3-tA-ROz">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="82" height="43.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="77" height="43.5"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5h" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znq-To-H9P">
-                                                                            <rect key="frame" x="82" y="0.0" width="82" height="43.5"/>
+                                                                            <rect key="frame" x="77" y="0.0" width="77" height="43.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ilL-Hl-2H9">
-                                                                            <rect key="frame" x="82" y="43.5" width="82" height="43.5"/>
+                                                                            <rect key="frame" x="77" y="43.5" width="77" height="43.5"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xru-RL-8yy">
-                                                                                    <rect key="frame" x="45" y="-1" width="37" height="44.5"/>
+                                                                                    <rect key="frame" x="42.5" y="-1" width="34.5" height="44.5"/>
                                                                                     <color key="tintColor" systemColor="systemRedColor"/>
                                                                                     <imageReference key="image" image="exclamationmark.circle.fill" catalog="system" symbolScale="large"/>
                                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
@@ -313,7 +313,7 @@
                                                                             </constraints>
                                                                         </view>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23 C" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJW-gG-Crj">
-                                                                            <rect key="frame" x="0.0" y="43.5" width="82" height="43.5"/>
+                                                                            <rect key="frame" x="0.0" y="43.5" width="77" height="43.5"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -697,11 +697,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.25488850470000002" green="0.36206501720000001" blue="0.25096416469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
-                        <segue destination="XLH-Rq-E7a" kind="relationship" relationship="viewControllers" id="AOj-wG-FsF"/>
-                        <segue destination="f1n-uc-Pld" kind="relationship" relationship="viewControllers" id="KLz-lw-cA6"/>
-                        <segue destination="xD5-bh-A1k" kind="relationship" relationship="viewControllers" id="gnS-aD-Jep"/>
+                        <segue destination="XLH-Rq-E7a" kind="relationship" relationship="viewControllers" id="Tcj-0w-hGj"/>
+                        <segue destination="8it-xt-gun" kind="relationship" relationship="viewControllers" id="hA6-6i-3Ms"/>
+                        <segue destination="xD5-bh-A1k" kind="relationship" relationship="viewControllers" id="I6J-MG-kbn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wVk-Kk-x6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -712,7 +713,9 @@
         <scene sceneID="bDb-8y-l78">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XLH-Rq-E7a" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Suhu Kolam" id="Mt2-yv-i8h"/>
+                    <tabBarItem key="tabBarItem" title="Suhu Kolam" image="temperature_ic" landscapeImage="temperature_ic" largeContentSizeImage="temperature_ic" selectedImage="temperature_ic" id="Mt2-yv-i8h">
+                        <color key="badgeColor" red="0.25488850470000002" green="0.36206501720000001" blue="0.25096416469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="koA-mX-BPC">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -742,10 +745,11 @@
             <objects>
                 <viewControllerPlaceholder storyboardName="History" id="f1n-uc-Pld" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="NnW-nC-GLO"/>
+                    <navigationItem key="navigationItem" id="faM-Qq-Jhr"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u5h-4n-fMn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1070" y="-669"/>
+            <point key="canvasLocation" x="1962" y="-62"/>
         </scene>
         <!--Settings-->
         <scene sceneID="gZw-ju-HxC">
@@ -756,13 +760,16 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UkI-yD-aND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1256" y="-287"/>
+            <point key="canvasLocation" x="1575" y="471"/>
         </scene>
-        <!--Item-->
+        <!--Pengaturan-->
         <scene sceneID="mgd-Dw-9Rl">
             <objects>
                 <navigationController id="xD5-bh-A1k" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="rqj-97-1HA"/>
+                    <tabBarItem key="tabBarItem" title="Pengaturan" image="gearshape.fill" catalog="system" landscapeImage="gearshape.fill" selectedImage="gearshape.fill" id="rqj-97-1HA">
+                        <imageReference key="largeContentSizeImage" image="gearshape.fill" catalog="system" renderingMode="original"/>
+                        <color key="badgeColor" red="0.25488850470000002" green="0.36206501720000001" blue="0.25096416469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="N6u-gM-6Tm">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -773,15 +780,37 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6L-lr-ATM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="538" y="-287"/>
+            <point key="canvasLocation" x="-443" y="471"/>
+        </scene>
+        <!--Riwayat-->
+        <scene sceneID="Ki0-ic-NnU">
+            <objects>
+                <navigationController id="8it-xt-gun" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Riwayat" image="bell.fill" catalog="system" landscapeImage="bell.fill" largeContentSizeImage="bell.fill" selectedImage="bell.fill" id="J88-BM-IDO">
+                        <color key="badgeColor" red="0.25488850470000002" green="0.36206501720000001" blue="0.25096416469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pSV-wR-DdL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="f1n-uc-Pld" kind="relationship" relationship="rootViewController" id="vrK-EO-jSk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3q4-vb-ZDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="-62"/>
         </scene>
     </scenes>
     <resources>
+        <image name="bell.fill" catalog="system" width="128" height="124"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="exclamationmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="phone.bubble.left.fill" catalog="system" width="128" height="110"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <image name="temperature_ic" width="16" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

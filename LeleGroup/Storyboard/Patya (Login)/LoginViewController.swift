@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func masukPressed(_ sender: Any) {
-        performSegue(withIdentifier: "goToMain", sender: self)
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
