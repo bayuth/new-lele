@@ -200,7 +200,7 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
         alertCollectionView.delegate = self
     }
     
-    func temperatureStatusCheck(degree: Int64) -> (String, Bool){
+    func temperatureStatusCheck(degree: Int64, poolData: Pool) -> (String, Bool){
         var pool = poolData
         var status = ""
         var isActive = true
@@ -280,7 +280,8 @@ extension TemperatureViewController: CocoaMQTTDelegate {
         
         let degree = Int64(temperature)
         if poolName == "Kolam 1" {
-            let statusOrIsActive = temperatureStatusCheck(degree: degree)
+            var pool = poolData[0]
+            let statusOrIsActive = temperatureStatusCheck(degree: degree, poolData: poolData[0])
             poolData[0].alert.temperature = temperature
             poolData[0].alert.status = statusOrIsActive.0
             poolData[0].alert.isActive = statusOrIsActive.1
@@ -289,7 +290,8 @@ extension TemperatureViewController: CocoaMQTTDelegate {
             poolCollectionView.reloadData()
             
         } else if poolName == "Kolam 2"{
-            let statusOrIsActive = temperatureStatusCheck(degree: degree)
+            var pool = poolData[1]
+            let statusOrIsActive = temperatureStatusCheck(degree: degree, poolData: poolData[1])
             poolData[1].alert.temperature = temperature
             poolData[1].alert.status = statusOrIsActive.0
             poolData[1].alert.isActive = statusOrIsActive.1
