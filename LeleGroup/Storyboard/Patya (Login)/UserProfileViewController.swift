@@ -33,7 +33,7 @@ class UserProfileViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Keluar", style: .default, handler: {action in alertSuccess()}))
         
         func alertSuccess(){
-            
+            isLogin = false
             let alert2 = UIAlertController (title: "Anda berhasil keluar", message: nil, preferredStyle: .alert)
             alert2.addAction(UIAlertAction(title: "Selesai", style: .default, handler: {action in print("Selesai")
                 self.navigationController?.popViewController(animated: true)

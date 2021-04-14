@@ -18,6 +18,8 @@ class AllAlertViewController: UIViewController, UICollectionViewDataSource, UICo
         alertCollectionView.dataSource = self
         alertCollectionView.delegate = self
         
+        alertCollectionView.reloadData()
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

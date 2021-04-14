@@ -151,13 +151,9 @@ class TemperatureSetting : UIViewController {
             suhu[0].suhuKuningAtas = stepper2.value
             suhu[0].suhuKritisBawah = stepper3.value
             suhu[0].suhuKritisAtas = stepper4.value
-            
-           
-            
+
             do{
                 try self.context.save()
-                
-                
             } catch {
                 
             }

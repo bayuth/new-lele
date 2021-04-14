@@ -15,8 +15,10 @@ class CustomPoolCollectionViewCell: UICollectionViewCell {
     var pool: Pool? {
         didSet{
             poolTitle?.text = pool?.name
+            poolTitle.textColor =  .black
             temperatureDetail.fadeTransition(0.4)
             temperatureDetail?.text = "\(pool?.alert.temperature.toString ?? "") °C"
+            temperatureDetail.textColor = .black
             temperatureBox.layer.cornerRadius = 10
             
            /* UIView.transition(with: temperatureDetail,
@@ -29,12 +31,15 @@ class CustomPoolCollectionViewCell: UICollectionViewCell {
             if !(pool?.alert.isActive ?? true) {
                 temperatureDetail.textColor = .white
                 temperatureBox?.backgroundColor = #colorLiteral(red: 0.4940721393, green: 0.4941467047, blue: 0.4940558076, alpha: 1)
+                temperatureBox?.layer.borderColor = #colorLiteral(red: 0.4940721393, green: 0.4941467047, blue: 0.4940558076, alpha: 1)
                 poolTitle.textColor =  .white
                 temperatureDetail.text = "Tidak Aktif"
                 
             } else {
                 let alert = pool?.alert.status
                 temperatureBox.layer.borderWidth = 1
+                poolTitle.textColor =  .black
+                temperatureDetail.textColor = .black
                 if alert == "warning" {
                 //yellow
                     temperatureBox?.backgroundColor = #colorLiteral(red: 1, green: 0.7014456987, blue: 0, alpha: 0.08)

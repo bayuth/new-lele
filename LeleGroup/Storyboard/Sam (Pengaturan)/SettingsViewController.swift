@@ -7,9 +7,11 @@
 
 import UIKit
 
+public var isLogin = false
+
 class SettingsViewController: UIViewController {
     
-    var isLogin = true
+    
     @IBAction func showTemperatureSetting(_ sender: UIButton) {
         performSegue(withIdentifier: "goToTemperatureSetting", sender: self)
     }

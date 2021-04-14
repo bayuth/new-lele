@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func masukPressed(_ sender: Any) {
+        isLogin = true
         self.navigationController?.popViewController(animated: true)
     }
     

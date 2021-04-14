@@ -20,27 +20,42 @@ class CustomAlertCollectionViewCell: UICollectionViewCell {
             
             temperatureDetail?.text = "\(alerts?.alert.temperature.toString ?? "") °C"
             temperatureBox!.layer.cornerRadius = 10
+            timeUpdated?.text = changeToTime(time: (alerts?.alert.lastUpdate)!)
             
             let alert = alerts?.alert.status
             temperatureBox?.layer.borderWidth = 1
-                if alert == "warning" {
+            if alert == "warning" {
                 //yellow
+                temperatureBox?.isHidden = false
                 temperatureBox?.backgroundColor = #colorLiteral(red: 1, green: 0.7014456987, blue: 0, alpha: 0.08)
-                    temperatureBox?.layer.borderColor = #colorLiteral(red: 1, green: 0.7014456987, blue: 0, alpha: 1)
-                    alertIcon?.tintColor = #colorLiteral(red: 1, green: 0.7014456987, blue: 0, alpha: 1)
+                temperatureBox?.layer.borderColor = #colorLiteral(red: 1, green: 0.7014456987, blue: 0, alpha: 1)
+                alertIcon?.tintColor = #colorLiteral(red: 1, green: 0.7014456987, blue: 0, alpha: 1)
                 
-                } else if alert == "danger" {
+            } else if alert == "danger" {
                 //red
-                    temperatureBox?.backgroundColor = #colorLiteral(red: 0.8771819472, green: 0.1257886291, blue: 0.1278358102, alpha: 0.08)
-                    temperatureBox?.layer.borderColor =  #colorLiteral(red: 0.8771819472, green: 0.1257886291, blue: 0.1278358102, alpha: 1)
+                temperatureBox?.isHidden = false
+                temperatureBox?.backgroundColor = #colorLiteral(red: 0.8771819472, green: 0.1257886291, blue: 0.1278358102, alpha: 0.08)
+                temperatureBox?.layer.borderColor =  #colorLiteral(red: 0.8771819472, green: 0.1257886291, blue: 0.1278358102, alpha: 1)
                 
-                    alertIcon?.tintColor = #colorLiteral(red: 0.8771819472, green: 0.1257886291, blue: 0.1278358102, alpha: 1)
+                alertIcon?.tintColor = #colorLiteral(red: 0.8771819472, green: 0.1257886291, blue: 0.1278358102, alpha: 1)
                 
-                } else {
+            } else {
                 //grey
+                temperatureBox?.isHidden = true
                 temperatureBox?.backgroundColor = #colorLiteral(red: 0.9763854146, green: 0.9765252471, blue: 0.9763546586, alpha: 1)
                 temperatureBox?.layer.borderColor = #colorLiteral(red: 0.6979769468, green: 0.6980791688, blue: 0.6979545951, alpha: 1)
+                alertIcon?.tintColor = .clear
+                
             }
         }
+    }
+    func changeToTime(time: Date) -> String {
+        let currentTime =  time
+        let formatter = DateFormatter()
+        formatter.timeZone = .current
+        formatter.locale = .current
+        formatter.dateFormat = "HH:mm"
+        
+        return (formatter.string(from: currentTime))
     }
 }
