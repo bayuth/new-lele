@@ -200,7 +200,7 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
         alertCollectionView.delegate = self
     }
     
-    func temperatureStatusCheck(degree: Int64, poolData: Pool) -> (String, Bool){
+    func temperatureStatusCheck(degree: Int64) -> (String, Bool){
         var pool = poolData
         var status = ""
         var isActive = true
@@ -280,21 +280,25 @@ extension TemperatureViewController: CocoaMQTTDelegate {
         
         let degree = Int64(temperature)
         if poolName == "Kolam 1" {
-            var pool = poolData[0]
-            let statusOrIsActive = temperatureStatusCheck(degree: degree, poolData: pool)
-            pool.alert.temperature = temperature
-            pool.alert.status = statusOrIsActive.0
-            pool.alert.isActive = statusOrIsActive.1
+            let statusOrIsActive = temperatureStatusCheck(degree: degree)
+            poolData[0].alert.temperature = temperature
+            poolData[0].alert.status = statusOrIsActive.0
+            poolData[0].alert.isActive = statusOrIsActive.1
+            
+            alertCollectionView.reloadData()
+            poolCollectionView.reloadData()
             
         } else if poolName == "Kolam 2"{
-            var pool = poolData[1]
-            let statusOrIsActive = temperatureStatusCheck(degree: degree, poolData: pool)
-            pool.alert.temperature = temperature
-            pool.alert.status = statusOrIsActive.0
-            pool.alert.isActive = statusOrIsActive.1
+            let statusOrIsActive = temperatureStatusCheck(degree: degree)
+            poolData[1].alert.temperature = temperature
+            poolData[1].alert.status = statusOrIsActive.0
+            poolData[1].alert.isActive = statusOrIsActive.1
+            
+            alertCollectionView.reloadData()
+            poolCollectionView.reloadData()
         }
-        alertCollectionView.reloadData()
-        poolCollectionView.reloadData()
+//        alertCollectionView.reloadData()
+//        poolCollectionView.reloadData()
         
         if alertData[0].alert.temperature == kuningBawah || alertData[0].alert.temperature == kuningAtas || alertData[1].alert.temperature == kuningBawah || alertData[1].alert.temperature == kuningAtas{
             UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {success, error in
