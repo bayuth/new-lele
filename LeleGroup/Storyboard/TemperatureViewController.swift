@@ -10,7 +10,7 @@ import CocoaMQTT
 
 class TemperatureViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var poolData: [Pool] = Pool.generateDummyPool()
+//    var poolData: [Pool] = Pool.generateDummyPool()
 //    var alertData: [Pool] = Alert.generateDummyAlert()
     var alertData: [Pool] = [
         Pool(id: 1, name: "Kolam 1", alert:
@@ -18,17 +18,26 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
         Pool(id: 2, name: "Kolam 2", alert:
                 Alert(id: 0, temperature: 23.0, status: "normal", isActive: true, lastUpdate: Date()))
     ]
+    
+    var poolData: [Pool] =
+        [
+            Pool(id: 1, name: "Kolam 1", alert:
+                    Alert(id: 0, temperature: 26.0, status: "normal", isActive: true, lastUpdate: Date())),
+            Pool(id: 2, name: "Kolam 2", alert:
+                    Alert(id: 0, temperature: 23.0, status: "normal", isActive: true, lastUpdate: Date()))
+        ]
+    
     var isDataEmpty = true
     var stringHelper = StringHelper()
     
     //initialized core data
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    var suhu:[BatasSuhu] = []
+    var degreeLimit:[BatasSuhu] = []
     
     func tesCoreData(){
         do{
-            self.suhu = try context.fetch(BatasSuhu.fetchRequest())
+            self.degreeLimit = try context.fetch(BatasSuhu.fetchRequest())
         }
         catch{}
     }
@@ -63,15 +72,13 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tesCoreData()
         //initialized core data
-        let printSuhu = self.suhu
+        let printSuhu = self.degreeLimit
         
         if printSuhu == []{
-            
             //Create Batas Suhu Object
             let newBatasSuhu = BatasSuhu(context: self.context)
-            
             do {
                 try self.context.save()
                 print("Saved")
@@ -190,33 +197,28 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
         alertCollectionView.delegate = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-           super.viewWillAppear(animated)
-           print("viewWillAppear(_:) called")
+    func temperatureStatusCheck(degree: Int64, poolData: Pool) -> (String, Bool){
+        var pool = poolData
+        var status = ""
+        var isActive = true
         
-        DispatchQueue.main.async {
-            
-            self.view.layoutIfNeeded()
+        if degree < 0 {
+            status = "device error"
+            isActive = false
+        } else {
+            if degree > degreeLimit[0].suhuKuningBawah && degree < degreeLimit[0].suhuKuningAtas {
+                status = "normal"
+            } else if degree < degreeLimit[0].suhuKuningBawah && degree > degreeLimit[0].suhuKritisBawah ||  degree > degreeLimit[0].suhuKuningAtas && degree < degreeLimit[0].suhuKritisAtas{
+                pool.alert.status = "warning"
+            } else if degree < degreeLimit[0].suhuKuningBawah && degree > degreeLimit[0].suhuKritisBawah ||  degree > degreeLimit[0].suhuKuningAtas && degree < degreeLimit[0].suhuKritisAtas{
+                pool.alert.status = "danger"
+            }
         }
-       }
-}
+        
+        return (status, isActive)
+    }
 
-//public func getTemperatureData(pool: [Pool], alert: [Pool]) {
-//    //cek kolam.count
-//    //cek nama kolam/sensor
-//    //jika sama, cek suhu -> jika ya, update, jika no, abaikan
-//    //jika tidak sama, add baru
-//
-//
-//}
-//func getReceivedMsg() -> (String,Double) {
-//
-//}
-//func addReceivedData(poolName: String, temperature: Double) -> (String,Double) {
-//
-//
-//    return( poolName, temperature)
-//}
+}
 
 extension TemperatureViewController: CocoaMQTTDelegate {
     // Optional ssl CocoaMQTTDelegate
@@ -266,14 +268,25 @@ extension TemperatureViewController: CocoaMQTTDelegate {
         let tempDegree = stringHelper.getMiddleWord(start: 10, end: -8, words: msg)
         guard let temperature = Double(tempDegree) else {return}
         
-        print("MqttDidReceiveMessage divided PoolName: \(poolName), Temperature: \(temperature)=============")
+        print("MqttDidReceiveMessage PoolName: \(poolName), Temperature: \(temperature)=============")
         
+        let degree = Int64(temperature)
         if poolName == "Kolam 1" {
-            alertData[0].alert.temperature = temperature
-        } else {
-            alertData[1].alert.temperature = temperature
+            var pool = poolData[0]
+            let statusOrIsActive = temperatureStatusCheck(degree: degree, poolData: pool)
+            pool.alert.temperature = temperature
+            pool.alert.status = statusOrIsActive.0
+            pool.alert.isActive = statusOrIsActive.1
+            
+        } else if poolName == "Kolam 2"{
+            var pool = poolData[1]
+            let statusOrIsActive = temperatureStatusCheck(degree: degree, poolData: pool)
+            pool.alert.temperature = temperature
+            pool.alert.status = statusOrIsActive.0
+            pool.alert.isActive = statusOrIsActive.1
         }
         alertCollectionView.reloadData()
+        poolCollectionView.reloadData()
         
         //print("didReceiveMessage", message.string!, message.topic)
     }
@@ -298,5 +311,4 @@ extension TemperatureViewController: CocoaMQTTDelegate {
         print("\(err?.localizedDescription)")
     }
 }
-
 
