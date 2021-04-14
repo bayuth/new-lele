@@ -12,8 +12,14 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
     
     var poolData: [Pool] = Pool.generateDummyPool()
 //    var alertData: [Pool] = Alert.generateDummyAlert()
-    var alertData = [Pool]()
+    var alertData: [Pool] = [
+        Pool(id: 1, name: "Kolam 1", alert:
+                Alert(id: 0, temperature: 23.0, status: "normal", isActive: true, lastUpdate: Date())),
+        Pool(id: 2, name: "Kolam 2", alert:
+                Alert(id: 0, temperature: 23.0, status: "normal", isActive: true, lastUpdate: Date()))
+    ]
     var isDataEmpty = true
+    var stringHelper = StringHelper()
     
     //initialized core data
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -27,11 +33,9 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
         catch{}
     }
     
-    
     //Main Section
     @IBOutlet weak var temperatureIsEmptyView: UIView!
     @IBOutlet weak var temperatureIsNotEmptyView: UIView!
-    
     
     //isEmpty Variable
     @IBAction func connectingToOperator(_ sender: UIButton) {
@@ -98,10 +102,6 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
             alertIsEmptyView.isHidden = false
             alertIsNotEmptyView.isHidden = true
         }
-        
-        
-        
-        
     }
     
     //Mqtt
@@ -117,6 +117,7 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
         mqtt!.delegate = self
         mqtt?.connect()
     }
+    
     
     //CollectionView Func
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -144,7 +145,6 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "alertCollectionCell", for: indexPath) as! CustomAlertCollectionViewCell
             return cell
         }
-        
     }
     
     //Made Function
@@ -189,7 +189,34 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
         alertCollectionView.dataSource = self
         alertCollectionView.delegate = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+           print("viewWillAppear(_:) called")
+        
+        DispatchQueue.main.async {
+            
+            self.view.layoutIfNeeded()
+        }
+       }
 }
+
+//public func getTemperatureData(pool: [Pool], alert: [Pool]) {
+//    //cek kolam.count
+//    //cek nama kolam/sensor
+//    //jika sama, cek suhu -> jika ya, update, jika no, abaikan
+//    //jika tidak sama, add baru
+//
+//
+//}
+//func getReceivedMsg() -> (String,Double) {
+//
+//}
+//func addReceivedData(poolName: String, temperature: Double) -> (String,Double) {
+//
+//
+//    return( poolName, temperature)
+//}
 
 extension TemperatureViewController: CocoaMQTTDelegate {
     // Optional ssl CocoaMQTTDelegate
@@ -211,7 +238,6 @@ extension TemperatureViewController: CocoaMQTTDelegate {
         if ack == .accept {
             mqtt.subscribe("samuelmaynard13@gmail.com/testing1", qos: CocoaMQTTQoS.qos1)
             isMqttConnected = true
-            
             print("MQTT is Connected")
         }
         else{
@@ -233,15 +259,23 @@ extension TemperatureViewController: CocoaMQTTDelegate {
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16 ) {
-        var info = message.string!
-        let start = info.index(info.startIndex, offsetBy: 11)
-        let end = info.index(info.endIndex, offsetBy: -12)
-        let range = start..<end
-        let mySubstring = info[range]
-        let temp = Double(mySubstring)
+        let msg = message.string!
+        let tempPool = stringHelper.getFirstWord(start: 7, words: msg )
+        let poolName = tempPool
         
-//        print(mySubstring, temp)
-//        print("didReceiveMessage", message.string!, message.topic)
+        let tempDegree = stringHelper.getMiddleWord(start: 10, end: -8, words: msg)
+        guard let temperature = Double(tempDegree) else {return}
+        
+        print("MqttDidReceiveMessage divided PoolName: \(poolName), Temperature: \(temperature)=============")
+        
+        if poolName == "Kolam 1" {
+            alertData[0].alert.temperature = temperature
+        } else {
+            alertData[1].alert.temperature = temperature
+        }
+        alertCollectionView.reloadData()
+        
+        //print("didReceiveMessage", message.string!, message.topic)
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didSubscribeTopics success: NSDictionary, failed: [String]) {

@@ -15,8 +15,16 @@ class CustomPoolCollectionViewCell: UICollectionViewCell {
     var pool: Pool? {
         didSet{
             poolTitle?.text = pool?.name
+            temperatureDetail.fadeTransition(0.4)
             temperatureDetail?.text = "\(pool?.alert.temperature.toString ?? "") °C"
             temperatureBox.layer.cornerRadius = 10
+            
+           /* UIView.transition(with: temperatureDetail,
+                          duration: 0.25,
+                           options: .transitionCrossDissolve,
+                        animations: { [weak self] in
+                            self?.temperatureDetail.text = "\(self?.pool?.alert.temperature.toString ?? "") °C"
+                     }, completion: nil)*/
             
             if !(pool?.alert.isActive ?? true) {
                 temperatureDetail.textColor = .white

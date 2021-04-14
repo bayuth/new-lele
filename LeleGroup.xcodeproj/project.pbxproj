@@ -17,6 +17,7 @@
 		5ECB8E3E262466B00053CE29 /* BatasSuhu+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB8E3C262466B00053CE29 /* BatasSuhu+CoreDataClass.swift */; };
 		5ECB8E3F262466B00053CE29 /* BatasSuhu+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB8E3D262466B00053CE29 /* BatasSuhu+CoreDataProperties.swift */; };
 		752F6CDA261F187300BA4362 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F6CD9261F187300BA4362 /* CustomCell.swift */; };
+		BF0640F52626899800A2D407 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0640F42626899800A2D407 /* StringHelper.swift */; };
 		BF9B1C52261D9710006FE7BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C51261D9710006FE7BE /* AppDelegate.swift */; };
 		BF9B1C54261D9710006FE7BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C53261D9710006FE7BE /* SceneDelegate.swift */; };
 		BF9B1C56261D9710006FE7BE /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B1C55261D9710006FE7BE /* TemperatureViewController.swift */; };
@@ -54,6 +55,7 @@
 		5ECB8E3C262466B00053CE29 /* BatasSuhu+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BatasSuhu+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5ECB8E3D262466B00053CE29 /* BatasSuhu+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BatasSuhu+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		752F6CD9261F187300BA4362 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCell.swift; path = "LeleGroup/Custom Style/CustomCell.swift"; sourceTree = SOURCE_ROOT; };
+		BF0640F42626899800A2D407 /* StringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
 		BF9B1C4E261D9710006FE7BE /* LeleGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeleGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9B1C51261D9710006FE7BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF9B1C53261D9710006FE7BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				BF9B1C83261DB5A8006FE7BE /* Extension.swift */,
+				BF0640F42626899800A2D407 /* StringHelper.swift */,
 			);
 			path = "Helper Component";
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				BF9B1C5C261D9710006FE7BE /* LeleGroup.xcdatamodeld in Sources */,
 				BF9B1C52261D9710006FE7BE /* AppDelegate.swift in Sources */,
 				5E8CEC0C2625E98F00A0D7FE /* Pengguna+CoreDataProperties.swift in Sources */,
+				BF0640F52626899800A2D407 /* StringHelper.swift in Sources */,
 				BF9B1C6D261DAC8D006FE7BE /* Pool.swift in Sources */,
 				BF9B1C54261D9710006FE7BE /* SceneDelegate.swift in Sources */,
 				F98B9AA3261EA53600DABC18 /* LoginViewController.swift in Sources */,
