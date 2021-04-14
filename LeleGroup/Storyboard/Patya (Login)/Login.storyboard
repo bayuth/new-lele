@@ -37,7 +37,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="pM1-71-76Q"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Q1-ik-vI3" customClass="roundedButton" customModule="LeleGroup" customModuleProvider="target">
                                 <rect key="frame" x="20" y="248" width="374" height="50"/>
