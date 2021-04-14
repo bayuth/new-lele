@@ -200,26 +200,26 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
         alertCollectionView.delegate = self
     }
     
-    func temperatureStatusCheck(degree: Int64, poolData: Pool) -> (String, Bool){
-        var pool = poolData
-        var status = ""
-        var isActive = true
-        
-        if degree < 0 {
-            status = "device error"
-            isActive = false
-        } else {
-            if degree > degreeLimit[0].suhuKuningBawah && degree < degreeLimit[0].suhuKuningAtas {
-                status = "normal"
-            } else if degree < degreeLimit[0].suhuKuningBawah && degree > degreeLimit[0].suhuKritisBawah ||  degree > degreeLimit[0].suhuKuningAtas && degree < degreeLimit[0].suhuKritisAtas{
-                pool.alert.status = "warning"
-            } else if degree < degreeLimit[0].suhuKuningBawah && degree > degreeLimit[0].suhuKritisBawah ||  degree > degreeLimit[0].suhuKuningAtas && degree < degreeLimit[0].suhuKritisAtas{
-                pool.alert.status = "danger"
-            }
-        }
-        
-        return (status, isActive)
-    }
+//    func temperatureStatusCheck(degree: Int64, poolData: Pool) -> (String, Bool){
+//        var pool = poolData
+//        var status = ""
+//        var isActive = true
+//        
+//        if degree < 0 {
+//            status = "device error"
+//            isActive = false
+//        } else {
+//            if degree > degreeLimit[0].suhuKuningBawah && degree < degreeLimit[0].suhuKuningAtas {
+//                status = "normal"
+//            } else if degree < degreeLimit[0].suhuKuningBawah && degree > degreeLimit[0].suhuKritisBawah ||  degree > degreeLimit[0].suhuKuningAtas && degree < degreeLimit[0].suhuKritisAtas{
+//                pool.alert.status = "warning"
+//            } else if degree < degreeLimit[0].suhuKuningBawah && degree > degreeLimit[0].suhuKritisBawah ||  degree > degreeLimit[0].suhuKuningAtas && degree < degreeLimit[0].suhuKritisAtas{
+//                pool.alert.status = "danger"
+//            }
+//        }
+//        
+//        return (status, isActive)
+//    }
 
 }
 
@@ -278,60 +278,114 @@ extension TemperatureViewController: CocoaMQTTDelegate {
         
         print("MqttDidReceiveMessage PoolName: \(poolName), Temperature: \(temperature)=============")
         
-        let degree = Int64(temperature)
+        let degree = temperature
         if poolName == "Kolam 1" {
             var pool = poolData[0]
-            let statusOrIsActive = temperatureStatusCheck(degree: degree, poolData: poolData[0])
+            //let statusOrIsActive = temperatureStatusCheck(degree: degree, poolData: poolData[0])
+//            poolData[0].alert.status = statusOrIsActive.0
+//            poolData[0].alert.isActive = statusOrIsActive.1
             poolData[0].alert.temperature = temperature
-            poolData[0].alert.status = statusOrIsActive.0
-            poolData[0].alert.isActive = statusOrIsActive.1
-            
-            alertCollectionView.reloadData()
-            poolCollectionView.reloadData()
-            
+            if degree < 0 {
+                poolData[0].alert.status = "device error"
+                poolData[0].alert.isActive = false
+            } else {
+              if (degree > degreeLimit[0].suhuKuningBawah) && (degree < degreeLimit[0].suhuKuningAtas)  {
+                    poolData[0].alert.status = "normal"
+                    poolData[0].alert.isActive = true
+                    print("si normal 2")
+                } else if (degree < degreeLimit[0].suhuKuningBawah) && degree > degreeLimit[0].suhuKritisBawah ||  degree > degreeLimit[0].suhuKuningAtas && degree < degreeLimit[0].suhuKritisAtas{
+                    poolData[0].alert.status = "warning"
+                    poolData[0].alert.isActive = true
+                    print("si kuning")
+                } else if (degree < degreeLimit[0].suhuKuningBawah) && (degree < degreeLimit[0].suhuKritisBawah) ||  (degree > degreeLimit[0].suhuKuningAtas) && (degree > degreeLimit[0].suhuKritisAtas){
+                    poolData[0].alert.status = "danger"
+                    poolData[0].alert.isActive = true
+                }
+            }
+
         } else if poolName == "Kolam 2"{
             var pool = poolData[1]
-            let statusOrIsActive = temperatureStatusCheck(degree: degree, poolData: poolData[1])
+            //let statusOrIsActive = temperatureStatusCheck(degree: degree, poolData: poolData[1])
             poolData[1].alert.temperature = temperature
-            poolData[1].alert.status = statusOrIsActive.0
-            poolData[1].alert.isActive = statusOrIsActive.1
+//            poolData[1].alert.status = statusOrIsActive.0
+//            poolData[1].alert.isActive = statusOrIsActive.1
             
-            alertCollectionView.reloadData()
-            poolCollectionView.reloadData()
+            if degree < 0 {
+                poolData[1].alert.status = "device error"
+                poolData[1].alert.isActive = false
+            } else {
+                if degree > degreeLimit[0].suhuKuningBawah && degree < degreeLimit[0].suhuKuningAtas {
+                    poolData[1].alert.status = "normal"
+                    poolData[1].alert.isActive = true
+                    
+                } else if degree < degreeLimit[0].suhuKuningBawah && degree > degreeLimit[0].suhuKritisBawah ||  degree > degreeLimit[0].suhuKuningAtas && degree < degreeLimit[0].suhuKritisAtas{
+                    poolData[1].alert.status = "warning"
+                    poolData[1].alert.isActive = true
+                } else if degree < degreeLimit[0].suhuKuningBawah && degree > degreeLimit[0].suhuKritisBawah ||  degree > degreeLimit[0].suhuKuningAtas && degree > degreeLimit[0].suhuKritisAtas{
+                    poolData[1].alert.status = "danger"
+                    poolData[1].alert.isActive = true
+                }
+            }
         }
-//        alertCollectionView.reloadData()
-//        poolCollectionView.reloadData()
-        
-        if alertData[0].alert.temperature == kuningBawah || alertData[0].alert.temperature == kuningAtas || alertData[1].alert.temperature == kuningBawah || alertData[1].alert.temperature == kuningAtas{
-            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {success, error in
-                if success{
-                    self.tempNotification()
+        alertCollectionView.reloadData()
+        poolCollectionView.reloadData()
+        if temperature == kuningBawah{
+                    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {success, error in
+                        if success{
+                            let message = "Peringatan penurunan suhu pada kolam anda"
+                            self.tempNotification(notifBody:message)
+                        }
+                        else if error != nil {
+                            print("ada error", error)
+                
+                        }
+                    })
                 }
-                else if let error = error{
-                    print("ada error")
-        
+                else if temperature == kuningAtas{
+                    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {success, error in
+                        if success{
+                            let message = "Peringatan peningkatan suhu pada kolam anda"
+                            self.tempNotification(notifBody:message)
+                        }
+                        else if error != nil {
+                            print("ada error",error)
+                
+                        }
+                    })
                 }
-            })
-        }
-        else if alertData[0].alert.temperature <= kritisBawah || alertData[0].alert.temperature >= kritisAtas || alertData[1].alert.temperature <= kritisBawah || alertData[1].alert.temperature >= kritisAtas{
-            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {success, error in
-                if success{
-                    self.tempNotification()
+                else if temperature <= kritisBawah{
+                    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {success, error in
+                        if success{
+                            let message = "Peringatan penurunan suhu secara ekstrim pada kolam anda"
+                            self.tempNotification(notifBody:message)
+        //                    print(self.alertData[0].alert.temperature, self.alertData[1].alert.temperature)
+                        }
+                        else if error != nil{
+                            print("ada error",error)
+                
+                        }
+                    })
                 }
-                else if let error = error{
-                    print("ada error")
-        
+                else if temperature >= kritisAtas{
+                    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {success, error in
+                        if success{
+                            let message = "Peringatan peningkatan suhu secara ekstrim pada kolam anda"
+                            self.tempNotification(notifBody:message)
+                        }
+                        else if (error != nil) {
+                            print("ada error",error)
+                
+                        }
+                    })
                 }
-            })
-        }
         //print("didReceiveMessage", message.string!, message.topic)
     }
     
-    func tempNotification(){
+    func tempNotification(notifBody: String){
         let content = UNMutableNotificationContent()
         content.title = "Peringatan !"
         content.sound = .defaultCritical
-        content.body = "Kolam anda mengalami penurunan suhu"
+        content.body = notifBody
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         let request = UNNotificationRequest(identifier: "some_long_id", content: content, trigger: trigger)
     

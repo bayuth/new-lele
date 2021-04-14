@@ -147,10 +147,10 @@ class TemperatureSetting : UIViewController {
         
         func alertSuccess(){
             
-            suhu[0].suhuKuningBawah = Int64(stepper.value)
-            suhu[0].suhuKuningAtas = Int64(stepper2.value)
-            suhu[0].suhuKritisBawah = Int64(stepper3.value)
-            suhu[0].suhuKritisAtas = Int64(stepper4.value)
+            suhu[0].suhuKuningBawah = stepper.value
+            suhu[0].suhuKuningAtas = stepper2.value
+            suhu[0].suhuKritisBawah = stepper3.value
+            suhu[0].suhuKritisAtas = stepper4.value
             
            
             
