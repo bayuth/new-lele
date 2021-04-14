@@ -35,6 +35,7 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var degreeLimit:[BatasSuhu] = []
+    var userInit:[Pengguna] = []
     
     func tesCoreData(){
         do{
@@ -82,6 +83,7 @@ class TemperatureViewController: UIViewController, UICollectionViewDataSource, U
             let newBatasSuhu = BatasSuhu(context: self.context)
             do {
                 try self.context.save()
+                self.tesCoreData()
                 print("Saved")
             }
             catch{

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H524" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D75" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="BatasSuhu" representedClassName=".BatasSuhu" isAbstract="YES" syncable="YES">
         <attribute name="suhuKritisAtas" optional="YES" attributeType="Integer 64" defaultValueString="30" usesScalarValueType="YES"/>
         <attribute name="suhuKritisBawah" optional="YES" attributeType="Integer 64" defaultValueString="20" usesScalarValueType="YES"/>
@@ -13,9 +13,9 @@
         <relationship name="peringatan" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Peringatan" inverseName="kolam" inverseEntity="Peringatan"/>
     </entity>
     <entity name="Pengguna" representedClassName=".Pengguna" syncable="YES">
-        <attribute name="jumlahKolam" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="nama" optional="YES" attributeType="String"/>
-        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="jumlahKolam" optional="YES" attributeType="Integer 64" defaultValueString="2" usesScalarValueType="YES"/>
+        <attribute name="nama" optional="YES" attributeType="String" defaultValueString="Samuel Maynard"/>
+        <attribute name="password" optional="YES" attributeType="String" defaultValueString="Pecel Lele"/>
         <relationship name="kolam" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Kolam" inverseName="pengguna" inverseEntity="Kolam"/>
     </entity>
     <entity name="Peringatan" representedClassName=".Peringatan" syncable="YES">
@@ -29,7 +29,7 @@
     <elements>
         <element name="BatasSuhu" positionX="-63" positionY="-18" width="128" height="103"/>
         <element name="Kolam" positionX="168.953369140625" positionY="269.3126831054688" width="128" height="103"/>
-        <element name="Pengguna" positionX="-7.501220703125" positionY="162.3454895019531" width="128" height="103"/>
+        <element name="Pengguna" positionX="-7.501220703125" positionY="162.3454895019531" width="128" height="89"/>
         <element name="Peringatan" positionX="291.994384765625" positionY="-29.35232543945312" width="128" height="133"/>
     </elements>
 </model>
