@@ -7,6 +7,7 @@
 
 import UIKit
 import CocoaMQTT
+import UserNotifications
 
 class TemperatureViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -261,6 +262,11 @@ extension TemperatureViewController: CocoaMQTTDelegate {
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16 ) {
+        let kuningBawah = Double(degreeLimit[0].suhuKuningBawah)
+        let kuningAtas = Double(degreeLimit[0].suhuKuningAtas)
+        let kritisBawah = Double(degreeLimit[0].suhuKritisBawah)
+        let kritisAtas = Double(degreeLimit[0].suhuKritisAtas)
+        
         let msg = message.string!
         let tempPool = stringHelper.getFirstWord(start: 7, words: msg )
         let poolName = tempPool
@@ -288,7 +294,44 @@ extension TemperatureViewController: CocoaMQTTDelegate {
         alertCollectionView.reloadData()
         poolCollectionView.reloadData()
         
+        if alertData[0].alert.temperature == kuningBawah || alertData[0].alert.temperature == kuningAtas || alertData[1].alert.temperature == kuningBawah || alertData[1].alert.temperature == kuningAtas{
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {success, error in
+                if success{
+                    self.tempNotification()
+                }
+                else if let error = error{
+                    print("ada error")
+        
+                }
+            })
+        }
+        else if alertData[0].alert.temperature <= kritisBawah || alertData[0].alert.temperature >= kritisAtas || alertData[1].alert.temperature <= kritisBawah || alertData[1].alert.temperature >= kritisAtas{
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {success, error in
+                if success{
+                    self.tempNotification()
+                }
+                else if let error = error{
+                    print("ada error")
+        
+                }
+            })
+        }
         //print("didReceiveMessage", message.string!, message.topic)
+    }
+    
+    func tempNotification(){
+        let content = UNMutableNotificationContent()
+        content.title = "Peringatan !"
+        content.sound = .defaultCritical
+        content.body = "Kolam anda mengalami penurunan suhu"
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let request = UNNotificationRequest(identifier: "some_long_id", content: content, trigger: trigger)
+    
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: {error in
+            if error != nil{
+                print("something went wrong")
+            }
+        })
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didSubscribeTopics success: NSDictionary, failed: [String]) {
